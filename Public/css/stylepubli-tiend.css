@@ -1,0 +1,14 @@
+ #col{
+    border-style: solid ;
+    border-color: black;
+    border-width: 0.5px;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+  }
+  .text-center{
+    position: relative;
+    font-family: Pacifico;
+    text-transform: uppercase;
+    font-size: extra-large;
+  }
