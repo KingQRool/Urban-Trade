@@ -5,15 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Public/css/register.css">
+    <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
 </head>
 <body>
 <body class="align">
-<div>
-<a href="../index.html"> INICIO
-<use xlink:href="#icon-home"></use>
-<i class="bi bi-house-door"></i>
-</a>
+<div class="Inicio">
+    <a href="../index.html">
+      <i class="fa-solid fa-house"></i>
+      INICIO
+    </a>
 </div>
 <div class="grid">
 
