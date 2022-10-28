@@ -3032,13 +3032,13 @@ textarea.form-control-lg {
 
 .btn-primary {
   color: #fff;
-  background-color: #ffc800;
-  border-color: #ffc800;
+  background-color:  #5BB318;
+  border-color: #7DCE13;
 }
 .btn-primary:hover {
   color: #fff;
-  background-color: #d9aa00;
-  border-color: #cca000;
+  background-color: #7DCE13;
+  border-color: #7DCE13;
 }
 .btn-check:focus + .btn-primary, .btn-primary:focus {
   color: #fff;
@@ -7694,7 +7694,7 @@ textarea.form-control-lg {
 }
 
 .text-uppercase {
-  text-transform: uppercase !important;
+  text-transform: uppercase ;
 }
 
 .text-capitalize {
@@ -11417,7 +11417,7 @@ header.masthead {
   padding-bottom: 6rem;
   text-align: center;
   color: #fff;
-  background-image: url("https://i.pinimg.com/originals/0a/4d/cb/0a4dcb92fa2d3c601b58d72720d6bec4.jpg");
+  background-image: url("https://images.pexels.com/photos/1136465/pexels-photo-1136465.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
