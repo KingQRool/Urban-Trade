@@ -1,0 +1,1 @@
+print("mona loca hpta sarnosa carechimba patricio estrella cuca de mona")

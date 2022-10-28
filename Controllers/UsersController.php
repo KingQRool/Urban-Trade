@@ -30,13 +30,15 @@ public function CargoVistaRegistrarse()
     //     header("location: ../ActualizarRegistro.php");
     // }
 
-        public function AlistarInformacion($nombreu,$emailu,$contrasena,$centrou)
+        public function AlistarInformacion($nombreu,$emailu,$contrasena,$centrou,$foto,$foto_url)
         {
         $this->nombreu = $nombreu;
         $this->emailu = $emailu;
         $contrasenaincrip = password_hash($contrasena,PASSWORD_ARGON2ID);
         $this->contrasenau = $contrasenaincrip;
         $this->centrou = $centrou;
+        $this->foto = $foto;
+        $this->foto_url = $foto_url;
         $this->GuardarUsuario();
         $this->RedirectLogin();
         
@@ -92,7 +94,9 @@ if(isset($_POST['action']) && $_POST['action']=="insertar"){
     $_POST['nombreu'],
     $_POST['emailu'],
     $_POST['contrasenau'],
-    $_POST['centrou']
+    $_POST['centrou'],
+    $_POST['foto'],
+    $_POST['foto_url'],
 ); 
 }
 if(isset($_POST['action']) && $_POST['action'] == "login"){

@@ -35,8 +35,15 @@ require '../Inc/Header.php';
             <input type="text" class="input" placeholder="Ingrese El Centro Al Que Centro pertenece" name="centrou" id="centrou">
             <label for="" class="label">Ingrese El Centro Educativo</label>
           </div>
+
+          <div class="contenedor">
+                <input type="file" class="input" placeholder="Ingrese Foto" name="fotoj" id="fotoj"
+                    accept=".jpg, .png, .gif, .pdf" >
+                <label for="" class="label">foto De Perfil</label>
+            </div>
+
+
           <div>
-            
           <input type="submit" class="submitBtn" value="REGISTRARSE">
           </div>
       </form>

@@ -1,10 +1,13 @@
 <?php
 class User{
     protected $idu;
-    protected $nombreu;
-    protected $emailu;
-    protected $contrasenau;
-    protected $centrou;
+    protected $nombreu; //1//
+    protected $emailu; //2//
+    protected $contrasenau; //3//
+    protected $centrou; //4//
+    protected $fotoj; //5//
+    protected $foto_url; //6//
+
 
 
 //este modelo es el unico que va a conectar a base de datos
@@ -13,12 +16,14 @@ class User{
     {
         include '../Config/Conexion.php';
         $conexion = new Conexion();
-        $sql = "INSERT INTO usuariosr (nombreu,emailu,contrasenau,centrou) VALUES (?,?,?,?)";
+        $sql = "INSERT INTO usuariosr (nombreu,emailu,contrasenau,centrou,foto,foto_url) VALUES (?,?,?,?,?,?)";
         $insertar = $conexion->stm->prepare($sql);
         $insertar->bindParam(1,$this->nombreu);
         $insertar->bindParam(2,$this->emailu);
         $insertar->bindParam(3,$this->contrasenau);
         $insertar->bindParam(4,$this->centrou);
+        $insertar->bindParam(5,$this->foto);
+        $insertar->bindParam(6,$this->foto_url);
         $insertar->execute();
 
         echo "guardo con exito";

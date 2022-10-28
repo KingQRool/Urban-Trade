@@ -125,7 +125,7 @@ background-color: white;
 }
 .submitBtn {
 display: block;
-margin-top: 30px;
+margin-top: 3px;
 margin-left: auto;
 padding: 15px 30px;
 border: none;
@@ -145,6 +145,7 @@ top: -7px;
 left: 3px;
 z-index: 10;
 font-size: 14px;
+
 font-weight: 600;
 color: #5BB318;
 }
