@@ -25,11 +25,11 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="../Index.html"> Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../Views/RegistroProyecto.php"> Registro</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../Views/IniciarSesiónProyecto.php">Inicio de sesion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Views/Register.php"> Registro</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Views/Login.php">Inicio de sesion</a></li>
                         <li class="nav-item"><a class="nav-link" href="../Views/Publicaciones.php">Publicaciones</a></li>
                         <li class="nav-item"><a class="nav-link" href="../Views/Tiendas.php">Tiendas U.T</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../Index.html"> Inicio</a></li>
                     </ul>
                 </div>
             </div>
