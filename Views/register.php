@@ -14,7 +14,7 @@
 <div class="Inicio">
     <a href="../index.html">
       <i class="fa-solid fa-house"></i>
-      INICIO
+      INICIO Edier daña codigo
     </a>
 </div>
 <div class="grid">
