@@ -5,16 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Public/css/register.css">
+    <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
+
     <title>Document</title>
 </head>
 <body>
 <body class="align">
+<<<<<<< HEAD
 <div class="iconhome">
 <a href="../index.html"> INICIO
 <label for="login__password"><svg class="iconhome">
     <use xlink:href="#icon-home"></use>
     </svg><span class="hidden">HOME</span></label>
 </a>
+=======
+<div class="Inicio">
+    <a href="../index.html">
+      <i class="fa-solid fa-house"></i>
+      INICIO
+    </a>
+>>>>>>> bc654c556e637456966d7c08190d33705cd586f6
 </div>
 <div class="grid">
 

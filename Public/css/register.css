@@ -51,19 +51,6 @@
     inline-size: 1em;
     vertical-align: middle;
   }
-  .iconhome {
-    block-size: 1em;
-    display: inline-block;
-    fill: var(--iconFill);
-    inline-size: 1em;
-    position: absolute;
-    top: 30px;
-    right: 0px;
-    width: 100px;
-    padding: 10px;
-  }
- 
-  
   
   /* layout/base.css */
   
