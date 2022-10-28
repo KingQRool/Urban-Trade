@@ -5,11 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Public/css/register.css">
+    <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
 <body class="align">
-
+<div class="Inicio">
+    <a href="../index.html">
+      <i class="fa-solid fa-house"></i>
+      INICIO
+    </a>
+</div>
 <div class="grid">
 
   <form action="https://httpbin.org/post" method="POST" class="form login">
