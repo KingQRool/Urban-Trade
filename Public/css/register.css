@@ -1,8 +1,4 @@
-@use postcss-preset-env {
-    stage: 0;
-  }
-  
-  /* config.css */
+ /* config.css */
   
   :root {
     --baseColor: #606468;

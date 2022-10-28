@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../Public/css/login.css">
     <title>Document</title>
+    <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
 </head>
 <body>
 <body class="align">
-
+<div class="Inicio">
+    <a href="../index.html">
+      <i class="fa-solid fa-house"></i>
+      INICIO
+    </a>
+</div>
 <div class="grid">
 
   <form action="https://httpbin.org/post" method="POST" class="form login">
