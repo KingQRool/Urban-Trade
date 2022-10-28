@@ -11,20 +11,12 @@
 </head>
 <body>
 <body class="align">
-<<<<<<< HEAD
-<div class="iconhome">
-<a href="../index.html"> INICIO
-<label for="login__password"><svg class="iconhome">
-    <use xlink:href="#icon-home"></use>
-    </svg><span class="hidden">HOME</span></label>
-</a>
-=======
 <div class="Inicio">
     <a href="../index.html">
       <i class="fa-solid fa-house"></i>
-      INICIO Edier daña codigo
+      INICIO
     </a>
->>>>>>> bc654c556e637456966d7c08190d33705cd586f6
+
 </div>
 <div class="grid">
 
