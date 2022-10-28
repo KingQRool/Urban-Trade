@@ -55,7 +55,7 @@
 
   </form>
 
-  <p class="text--center">Ya tienes cuenta? <a href="#">Inicia Sesion</a> <svg class="icon">
+  <p class="text--center">Ya tienes cuenta? <a href="login.php">Inicia Sesion</a> <svg class="icon">
       <use xlink:href="#icon-arrow-right"></use>
     </svg></p>
 
