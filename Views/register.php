@@ -13,7 +13,7 @@
 <div class="Inicio">
     <a href="../index.html">
       <i class="fa-solid fa-house"></i>
-      INICIO
+      INICIO 
     </a>
 </div>
 <div class="grid">
