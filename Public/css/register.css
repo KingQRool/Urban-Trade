@@ -96,7 +96,7 @@
     font-weight: var(--bodyFontWeight);
     line-height: var(--bodyLineHeight);
     margin: 0;
-    min-block-size: 100vh;
+    min-block-size: 90vh;
   }
   
   /* modules/anchor.css */
@@ -179,6 +179,7 @@
   .login label,
   .login input[type="text"],
   .login input[type="password"],
+  .login input[type="email"],
   .login input[type="submit"] {
     border-radius: var(--loginBorderRadus);
     padding: 1rem;
@@ -192,6 +193,7 @@
   }
   
   .login input[type="password"],
+  .login input[type="email"],
   .login input[type="text"] {
     background-color: var(--loginInputBackgroundColor);
     border-bottom-left-radius: 0;
@@ -200,6 +202,8 @@
   
   .login input[type="password"]:focus,
   .login input[type="password"]:hover,
+  .login input[type="email"]:focus,
+  .login input[type="email"]:hover,
   .login input[type="text"]:focus,
   .login input[type="text"]:hover {
     background-color: var(--loginInputHoverBackgroundColor);

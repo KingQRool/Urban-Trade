@@ -1,21 +1,23 @@
 <?php
 
-session_start();
-
 include_once '../Models/Users.php';
+require 'SesionsController.php';
+
+$sesioncontroller = new  SesionController();
+
 class UserController extends User{
 
 public function CargoVistaRegistrarse()
     {
-        include '../Views/RegistroProyecto.php';
+        include '../Views/Usuario/Register.php';
     }
     public function CargoVistaLogin()
     {
-        include '../Views/IniciarSesiónProyecto.php';
+        include '../Views/Usuario/Login.php';
     }
     public function CargoVistaInicio()
     {
-        include '../Views/index.php';
+        include '../Index.php';
     }
     public function CargarLista()
     {
@@ -64,15 +66,6 @@ public function CargoVistaRegistrarse()
         header("location: UsersController.php?action=login");
     }
 
-    // public function AlistarInformacionAct($nombreu,$emailu,$contrasena,$centrou)
-    //     {
-    //     $this->nombreu = $nombreu;
-    //     $this->emailu = $emailu;
-    //     $contrasenaincrip = password_hash($contrasena,PASSWORD_ARGON2ID);
-    //     $this->contrasenau = $contrasenaincrip;
-    //     $this->centrou = $centrou;
-        
-    //     }
 }
 
 
@@ -84,6 +77,7 @@ if(isset($_GET['action']) && $_GET['action']=='login'){
     $usercontroller = new UserController();
     $usercontroller->CargoVistaLogin();
 }
+
 if(isset($_GET['action']) && $_GET['action']=='inicio'){
     $usercontroller = new UserController();
     $usercontroller->CargoVistaInicio();
@@ -105,17 +99,7 @@ if(isset($_POST['action']) && $_POST['action'] == "login"){
 }
 if(isset($_GET['idu'])){
     $usercontroller = new UserController();
-    // $usercontroller->($_GET['idu']);
     $usercontroller->BorrarUsuario($_GET['idu']);
     $usercontroller->RedireccionarLista();
 }
-
-// if(isset($_GET['idua'])){
-//     $usercontroller = new UserController();
-//     $usercontroller->($_GET['idu']);
-//     $usercontroller->ActUsuario($_GET['idua']);
-//     $usercontroller->AlistarInformacionAct();
-//     $usercontroller->RedireccionarActualizar();
-// }
-
 ?>

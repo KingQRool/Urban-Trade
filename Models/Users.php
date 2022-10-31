@@ -16,27 +16,31 @@ class User{
     {
         include '../Config/Conexion.php';
         $conexion = new Conexion();
-        $sql = "INSERT INTO usuariosr (nombreu,emailu,contrasenau,centrou,foto,foto_url) VALUES (?,?,?,?,?,?)";
+        $sql = "INSERT INTO tbl_usuarios_registrado (nombreu,emailu,contrasenau,centrou,) VALUES (?,?,?,?)";
         $insertar = $conexion->stm->prepare($sql);
         $insertar->bindParam(1,$this->nombreu);
         $insertar->bindParam(2,$this->emailu);
         $insertar->bindParam(3,$this->contrasenau);
         $insertar->bindParam(4,$this->centrou);
-        $insertar->bindParam(5,$this->foto);
-        $insertar->bindParam(6,$this->foto_url);
         $insertar->execute();
-
-        echo "guardo con exito";
     }
     public function ConsultarUsuarioEnBd()
     {
         include '../Config/Conexion.php';
         $conexion = new Conexion();
-        $sql = "SELECT * FROM usuariosr WHERE emailu='$this->emailu'";
+        $sql = "SELECT * FROM tbl_usuarios_registrado WHERE emailu='$this->emailu'";
         $usuario = $conexion->stm->prepare($sql);
         $usuario->execute();
         $usuarioobjeto = $usuario->fetchAll(PDO::FETCH_OBJ);
         return $usuarioobjeto;
+    }
+    protected function BuscarUsuario(){
+        $conexion = new Conexion();
+        $sql = "SELECT * FROM tbl_usuarios_registrado WHERE idu='$this->idu'";
+        $mostrar = $conexion->stm->prepare($sql);
+        $mostrar->execute();
+        $objetoretornadousuario = $mostrar->fetchAll(PDO::FETCH_OBJ);
+        return $objetoretornadousuario;
     }
     public function BorrarUsuario($borrar){
         include '../Config/Conexion.php';
@@ -46,20 +50,7 @@ class User{
         $usuario->execute();
     }
 
-//     public function ActUsuario($idu)
-//     {
-//         include '../Config/Conexion.php';
-//         $conexion = new Conexion();
-//         $sql = "SELECT * FROM usuariosr WHERE idu=$idu";
-      
-        
-//         $consulta = $conexion->stm->prepare($sql);
-// $consulta->execute();
-// $persona = $consulta->fetchAll(PDO::FETCH_OBJ);
-// // var_dump($persona);
-// foreach($persona as $p){}
-//     }
 }
 
     
-    ?>
+?>
