@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../Public/Css/login.css">
+    <link rel="stylesheet" href="../Public/Css/login.css">
     <title>Document</title>
     <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
 </head>
@@ -23,7 +24,7 @@
 </div>
 <div class="grid">
 
-  <form action="https://httpbin.org/post" method="POST" class="form login">
+  <form action="../../Controllers/UsersController.php" method="POST" class="form login">
 
     <div class="form__field">
       <label for="login__password"><svg class="icon">

@@ -5,8 +5,6 @@ class User{
     protected $emailu; //2//
     protected $contrasenau; //3//
     protected $centrou; //4//
-    protected $fotoj; //5//
-    protected $foto_url; //6//
 
 
 
@@ -16,13 +14,14 @@ class User{
     {
         include '../Config/Conexion.php';
         $conexion = new Conexion();
-        $sql = "INSERT INTO tbl_usuarios_registrado (nombreu,emailu,contrasenau,centrou,) VALUES (?,?,?,?)";
+        $sql = "INSERT INTO tbl_usuarios_registrado(nombre_u,correo_u,contrasena_u,centro_u) VALUES (?,?,?,?)";
         $insertar = $conexion->stm->prepare($sql);
-        $insertar->bindParam(1,$this->nombreu);
-        $insertar->bindParam(2,$this->emailu);
-        $insertar->bindParam(3,$this->contrasenau);
-        $insertar->bindParam(4,$this->centrou);
+        $insertar->bindParam(1,$this->nombre_u);
+        $insertar->bindParam(2,$this->email_u);
+        $insertar->bindParam(3,$this->contrasena_u);
+        $insertar->bindParam(4,$this->centro_u);
         $insertar->execute();
+
     }
     public function ConsultarUsuarioEnBd()
     {

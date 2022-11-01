@@ -23,12 +23,13 @@
 </div>
 <div class="grid">
 
-  <form action="https://httpbin.org/post" method="POST" class="form login">
+  <form action="../../Controllers/UsersController.php" method="POST" class="form login" >
 
     <div class="form__field">
       <label for="login__username"><svg class="icon">
           <use xlink:href="#icon-user"></use>
         </svg><span class="hidden">Nombre</span></label>
+        <input type="hidden" name="action" value="insertar">
       <input id="login__username" type="text" name="nombreu" class="form__input" placeholder="Username" required>
     </div>
     
@@ -55,7 +56,7 @@
 
 
     <div class="form__field">
-      <input type="submit" value="Registrarse">
+      <input type="submit" value="insertar">
     </div>
 
   </form>
