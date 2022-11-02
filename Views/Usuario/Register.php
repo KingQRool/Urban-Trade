@@ -4,54 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../Public/Css/register.css">
+    <link rel="stylesheet" href="../Public/Css/register.css">
     <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
 <body class="align">
 <div class="Inicio">
-    <a href="../../index.php">
+    <a href="../index.php">
       <i class="fa-solid fa-house"></i>
       INICIO 
     </a>
 </div>
 <div class="logo-ut">
-  <a class="navbar-brand" href="../../Index.php">
-    <img src="../../Public/Img/logourbantrade.png" style="height: 40px;" alt="*AQUI VA EL LOGO*" id="Logo">
+  <a class="navbar-brand" href="../Index.php">
+    <img src="../Public/Img/logourbantrade.png" style="height: 40px;" alt="*AQUI VA EL LOGO*" id="Logo">
   </a>
 </div>
 <div class="grid">
 
-  <form action="../../Controllers/UsersController.php" method="POST" class="form login" >
+  <form action="UsersController.php" method="POST" class="form login" >
 
     <div class="form__field">
       <label for="login__username"><svg class="icon">
           <use xlink:href="#icon-user"></use>
         </svg><span class="hidden">Nombre</span></label>
         <input type="hidden" name="action" value="insertar">
-      <input id="login__username" type="text" name="nombreu" class="form__input" placeholder="Username" required>
+      <input id="login__username" type="text" name="nombre_u" class="form__input" placeholder="Username" required>
     </div>
     
     <div class="form__field">
       <label for="login__password"><svg class="icon">
           <use xlink:href="#icon-email"></use>
         </svg><span class="hidden">Correo</span></label>
-      <input id="login__email" type="email" name="emailu" class="form__input" placeholder="Correo" required>
+      <input id="login__email" type="email" name="correo_u" class="form__input" placeholder="Correo" required>
     </div>
 
     <div class="form__field">
       <label for="login__password"><svg class="icon">
           <use xlink:href="#icon-lock"></use>
-        </svg><span class="hidden">Password</span></label>
-      <input id="login__password" type="password" name="contrasenau" class="form__input" placeholder="Contraseña" required>
+        </svg><span class="hidden">Contraseña</span></label>
+      <input id="login__password" type="password" name="contrasena_u" class="form__input" placeholder="Contraseña" required>
     </div>
 
     <div class="form__field">
       <label for="login__centro"><svg class="icon">
           <use xlink:href="#icon-centro"></use>
         </svg><span class="hidden">Centro Educativo</span></label>
-      <input id="login_centro" type="text" name="centrou" class="form__input" placeholder="Centro Sena" required>
+      <input id="login_centro" type="text" name="centro_u" class="form__input" placeholder="Centro Sena" required>
     </div>
 
 
@@ -61,7 +61,7 @@
 
   </form>
 
-  <p class="text--center">Ya tienes cuenta? <a href="Login.php">Inicia Sesion</a> <svg class="icon">
+  <p class="text--center">Ya tienes cuenta? <a href="http://localhost/Urban-Trade/Controllers/UsersController.php?action=login">Inicia Sesion</a> <svg class="icon">
       <use xlink:href="#icon-arrow-right"></use>
     </svg></p>
 
