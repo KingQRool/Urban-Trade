@@ -50,9 +50,9 @@ class UserController extends User
         // echo $contrasena_u;
         foreach($usuarioobjeto as $usuario){};
         if(password_verify($contrasena_u,$usuario->contrasena_u)){
-            echo "La contraseña si coincide";
-            // $_SESSION['nombre_u'] = $usuario->nombreu;
-            // $this->CargoVistaInicio();
+            // echo "La contraseña si coincide";
+            $_SESSION['nombre_u'] = $usuario->nombre_u;
+            $this->CargoVistaInicio();
         }else{
             echo 'contraseña incorrecta';
         }
