@@ -83,16 +83,25 @@ require '../Inc/Header.php';
       
       <div class="row" id="row">
    
-        <div class="col" class="text-center" id="col">
-          <h2 class="ui center aligned header"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOMAAADeCAMAAAD4tEcNAAAAkFBMVEX/////Zxn/WAD/ZRT/WwD/XwD/cjD/VgD/YQD/XQD/Ygb/+fb/ZBH/49n/2c3/ybj/1Mb/rZD/oYD/k2r/fkf/mXT/p4j/8ez/mnX/8+//uaH/3dL/59//7Ob/zb3/w6//hlX/q47/s5n/eT//v6r/bij/iVv/ekH/jWH/dTf/f0r/ayH/kGb/o4L/TgD/g1CnAKOXAAAPFklEQVR4nO1daUOrOhAVCA1QbGtr99W6XKtX/f//7nVvwpyEAAHsfT0flUKGTOZMZgl3dzfckBWzxWQwGn09LFvNuodSDtq9kIV+EEWBHzK+Wc/qHpBtDL9YGDkCYt99XtQ9KptodnngEMSs0ap7ZNawCH0q4Q4e79U9NksYuR4WcYsg/ieW5aNiEk9T2al7gMXRACtRAr960/McpYi4FfLKLU9Pq6hHuPO6h1kES2YgohO/1j3OAhi7JiI6TvhU90jz4z19MR7Ar1Zb77mhiE70XvdY8+ItNpXxaidyaDyNW3/nq+7R5sPahDdOCOsebT401G4qBbtKl25oSBxHZR3UPd48WIRZZIz/1D3ePMi0HLfKWvd486Bv6gAc4A7rHnAO/Jiz434e7+secA5sMsp4jTusTNRxpeTx/D+Yx9X/YD2OMtrVcd0DzoFJNn68Soe1ZRTnOCFe1T3ePGhm2Fo5jr+ue7y58JHF6LjXaHLu7l4yOOWeU/do8yGLsl6pqt7dddPSABfwa00sj40n0r/KHfIeA1OKvMrN4xGemV/O2nUPtACmRtoaXG0EeY+JgbMTf9Y9yoIYpQrp+dcY5ZDQTxEyDq80DSBioF2TgXP1s7hD21U7ruyt7tFZwvCDYQ4J2LLusdnD4pPRufR591o9OIzFB/eF4EccMP/pGqMbegxf3n2XhVsw5m4G1xiGM8J4umgvF51/on7shhtuuOEGJZpb1D2GcjDuTL7enx3G3R04Dxqr/rpNea1pBOXV6NGpF1hBZ+S4zA+iWPCkvTjytw7K21J+7ObwErT47h4vXn4n/sM39OFr4SLOFSNsf3MJGSPQzYeQRcpQUxzykehmPhrE+8+lN20SOA9W5PlSuitQjDG57/YzFYcuWVq8MHCFKJqRjKdaOCqj45PmBxMZf0hqk2dIl3RNiqP4ZddXVEaHdRMjMJDxhYZPPPNS5kQYLQrZblmwRB+RUIlZWEaHJTId6TLOUfDEuJQ5kYVxe4vZuNkcz6fLnhSvCM4vX5YxChDOUwVlFLXCTEZcFMMNNzNyeluqtBiLZRpeBGWM+l2IkxBYRkfuYkmV8eFyFzEMHzfMZOxJKik/YPjtX/B9YhBJRpYSRVTI6PBpBhmFAm6vsRGEDB+MZJSLo0O5gWY9EYBlTFEXlYyOK/wwTUbnIpbbaokm0kxbE2V87K2dFvwsIKPwLDFUniLj6PLvXaH9mxgjMtLWZeJFx6EbvA2WU3VwKb+McVcQJnbO7pNexo5gFVkzUbNupK1NwI5xsCUQ/2ewhCwryegvOwhYRna3EtLMlznQytj0L5rKXnZ/eRAvN9LWF1Xcficpfx29JG8ic4cfUjBPJaNEAsGjiYxCU8ypcDnKbFvXXJMV9SLf9QaSmOk+gOCBJGVsik6//5Yuo9i+dfJDFqLbEhqVTnTiUJv79QL+I2htIRnv5tL4+mkyjoXLL164VAZk2Avz8un62pHH/OJjFpNRzjOzpxQZhYcJ9TySaxeD3RrEbP2HM1+9wXLCc7apoIx3bXGA7kQro+hMi32hX+IvzLR1j2Zr0vt0WaiQ9OxIJ2wOA1DbnB3WorrytkbGmfA6or442EAcY8bOreZ9e91r7CQls3WqGUpwRwtBK+PdSPzjdnqUMr4Kj/Jnw/kZw7VY62SsrRLmi/U7S2QQwxcgYyYf4FySI9LkluFeFDLKtT6SpsjlXHptvf8aXNCdSv/rNORd1MiajBJNenFX9CcvMppVwRzek05bO1zY9ZGWdmn7HPXsySjRpKPY+sTmXQbxs2YMM1GMKBmEkHTlFIeyIaNMkxLOMvbMywu32jrRDEJ6ViII8SSvhw6SMcv+USyRUyriScZFph48rbaOpLflR4PF/XBrQJvz1vpTEvFMenIcoPsA8dRJkVGmSSqjFGuMYUBFshY6bU1013rBIWblMubLy+Ec6kvEc3wId5Imo0yTREYx1hj/+QLhlK83aR0zjbaq3qeM+BKBMYnLOX66jDJNJmSUYo1csW2XHAHlVQchUztPYvbncgNrMso0KckoOaS+ah8sHymhbRkd97jOI499/iiG0fLL6Caf3AC32sso8aeX/Nnl99JE6rR1uyjXm51HniQkb79NfpzIJsuijE1AgTsZH6RfqbvrWrLt1Wnr/nGtyejDYztjs8fW7ISN98FySq7cuNQJJ+BHFlp+C3/8Jveac/rLLa+IP3JXmlH/SGNxzeKtzeF8NrufzeZDZR5wdm+C4ysdT4W/0fd1NyQ/3F40lfx7XWnWuCNd2vn3yrhuuOGGG264wSban40KEIAQwWz1d4eeDn1jjDB6uwe3mVc+/D4VcbvV8KPSsc9RK5O7NsGgM5jlwKvcT65KRlUQybg/Mj+qktFTNsaV/+y9jNmOZMoF9aYPVExZRkUy6o5wyHgATXZUJKMu2tnKFjjNjmpk1PeMv2U7nSUz9jJ2SpbR83Uils4flciY1v5XMn9UIWN6yvP6ZeQgNiXD7DzhvDjIWOojor9pIuLgsTVUIKPJKVWl8sdexmxHMmWE2ZEx2mOTk1uYjCM4zOP3IRCeAZdgdBj6IVOneL3YREQdf/huY7Pbf76+fm6xkzje5x993983xJ6j4srmkl1ZSXNX/XHEeI/mOFOfzPxLqWsMHJOPlFfFHx6bFOnUsdnpo1pQ8SO9tgnPWPOxCoa/qKlXcdQqKiftuyiBiPkj/E2nB6DaXscJRvTKe46TZpA/ftfJQRukayjAsYnxVmuKKqCBqtcIdH4lCnC0dzoJt8yAP0z8hwoBzsyFHVD7wgR4lhzgj/h3nVfiUF1Fs3XkCFi38ETsVoY+sQoA4l4RmIRzgQY0O5Q/ftVRXqCQFwU4zqsWvQDAH56i/bEOPFB6RAGOzsV2QrND+SNbe2qZAMcBwgDH52W2odkBlYFpBSiV4S81+yjAMREXLSwWpvwBlboGgNePAhwJX4gD3xzwh/s7jtkBbaUowJHoyYNfl/mt/NGm7nQEvpRHvq0DzU5ADPSpOL9W0GHBAAeZbZjoAfsPnNarFIA3kD0Bg4dmhyp+kKxrrxyIN1D5JdoEo+kG+w/ThvHSgHgDBDhgMAOaHcof8UfpUmiBeAMMCZ5agIkB8Ad6aRUC8QZQLcXnEaDZAfyhrj2uAMCSoABHRxW4g3UC1FDXerA34A1k6j+VgV9kdsCLq/GbEFStIGVP1FkjGM6gCwA5FdUAmAfkeuGg3WmGgNlB+4/U7FdJAGEmNOSeNpuB/FFKSPkaN4sDvG60FUr5CCQyO8CxqOkwWsQbYEub9gkoFxgpFFgoXyAKYP5QgCM1SwztCeCPOr4oQD1QGOBQZGsEIHsCNmw1fOkT8AZaMwZVG9DsUA2v/oM7KKwNbJ/CUZWBzA4waJpWq3IAeAMd8Wb2XT3kG1H+UFdPlgOwzUO2Q+mopv8U8Ie2ldo+QLoQcQBIg0AgswP4o9Kwh2HkYm1a3gTP9qH8EcCq9JIAeAMEvrWOauINAVce8Ud1H8EChID26shRjZjL0CFEipxzAtoTHKwC8QYIcABH1eOj1nC+bFAdRmoI+KOybB3iDRDgoNPgvR59FXAaAFJDwB8RvaoMgGocFAMFdunyJihvIg9iTJ9UUbYO8AZaTXTNCqEe4P8wYHYAf1SSrUO8AYb3pac3ZLbAi6IJahiUtQ06OORUp06UGfsB/qggWwcmAD0VLDiZ5w3ZDxmukiQ7A/AGCnAARzXpr/0xMjuAgErP1oF2DGQFqKNK/O6ZmdkBjkTJbivgDWTNgaNKBzaitb0hHT3gj5KzdbQ9CtXQgHGBfVETeDsgkYD4o8xsHWhzQ94V1S9oKMDdkNmh/FFqto6+eeQlozgFNPjUm0BmB1jgErN1gDfM7L2CuJHTDeJe9OPu5WXrAK+jKEWGvBMwmqDcHPBHadk6wBsowEEVWnkCI9hFI7MDXkVJ2TrAG2jw1FHVfN8ZkAwwmsBOl5StezUKcACF1gVGafoVWTHEH2Vk68CXudHggaO60twVOH3I7NDjvErJ1gHe+KFXLQDnaXd8YJGDtAniD/vZOrAfRFkW6qim7NyBk+8DX43yh/1sHVhmyG2kNiQ1AmPmqyH+sJ2tAxU2Zg50uksCfDVwkCHgD8vZOsQbYCMEEvnpriVYwsAJBq/PcrYO8AbwslFBhsG7/qC+GlhroG/NarYO8QbwskFh/xe9igDsltHvKH9YzdaBFhXgZYMGDTPb1zUyO4A/LGbrEG8A0gObf8PQPb0/6pmjESB7YQ/AG6hjis6GcQoGlVjT1wP4w1q2jvIGIj3wJsxjEiDECGIoiD/sZOuQSwl0kFpHtE1SwIziEX/YydZR3kA3RiyXYbH0aZAO0A7gDyvZOsAbSEHo4QQoWqoE+dohdh8Af1jorQMPRwudvuGMmx9Q5AqmCGiLhWxdlyoR0EGwUrJaA+BKAcsG+KNwtg5YS0S81FHNHIxAIXhqdoBxKpyto9t65EChIGJmdkYpeGp2+uCqgm7rK7klcoSpo5rDy0LMQM0ODeXFUdHUwJ+EMUEBDhrUz5UkRMxAd5/JbXj0WjwMuZKfjDZLZruSdFD+QWZHvsrXfRjAGH9FEdCmh5renGYAeFSAGeSPr1lq5h0JNwWherD9yxvFBqWgQG8E/mDm7mIKBuf3i3wX6qhm+FaYDMBUYP1f+IObfZ7UCOvjXVF9InU9NLH/NJhV4p2cW241xHr8LqQLAvDUUBQJs9CSFnAm1oE/vKK8mMT+IzTIlFCDX6inHwQ0gNnZ8UfMrBd6driHevqRo1rIfzRzSLezG5dQVDZl6JOu1FFVfvDGDMBKgzjqgjdKKWCZgSAbdVQNj5RTA5S0gAVujTPSQR3VwuUIYMNaa7MudVQtlJWAkpaC+l8EoIrIRp4FFMjWd8YMdVSt5MtQY+XKwn3zgJpAS4czoTqOqputjqCOqqWyfVDSUsA/LALqqGo/8pYFoKSlnjMCaKzTXj0iOFHgu/oez+1eJKmqFutKyW454IM6zkHoPDNZSlAgkBtySUvEu3Wd9NB6dAUprRbMiCUtEe/XeQTb9OcspeXCp3NJS8zfa1iJEu7fjl/+tN23dyhpid1V3ccg7TB730lpvf9yR02x+1jXQR1JzHo8sN+Q8BGxze84Qe+Aec9+P/Qsrsl/u+F34j8ctAWHXYOiBwAAAABJRU5ErkJggg==" alt="" width="100px"></h2>
-          <p>Nombre Producto</p>
-          <p>INFORMACION DEL PRODUCTO</p>
-          <p>PRECIO</p>
-          <p> ublicacion del sena Centro Mano factura Avanzada.</p>
-          <br>
-          <br>
-        </div>
-
+      <div class="ui card">
+    <?php foreach($p as $jugadores) {}?>
+  <div class="image">
+    <img src="<?php echo $jugadores->fotos_p; ?>">
+  </div>
+  <div class="content">
+    <a class="header"><?php echo $jugadores->nombre_p; ?></a>
+    <div class="meta">
+      <span class="date"><?php echo $jugadores->info_p; ?><br>
+      <?php echo $jugadores->paisj; ?></span>
+    </div>
+    <div class="description">
+    <?php echo $jugadores->precios_p; ?>
+    </div>
+  </div>
+  <div class="extra content">
+    
+  </div>
+</div>
 
         <div class="col" id="col">
           <h2 class="ui center aligned header"><img src="https://sena.edu.co/Style%20Library/alayout/images/logoSena.png" alt="" width="100px"></h2>

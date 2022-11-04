@@ -24,7 +24,7 @@
       <label"><svg class="icon">
           <use xlink:href="#icon-basket"></use>
         </svg><span class="hidden">Nombre Del Producto</span></label>
-      <input type="hidden" name="action" value="insert">
+      <input type="hidden" name="action" value="insertarP">
       <input  type="text"  name="nombre_p" class="form__input" placeholder="Nombre del producto" required>
     </div>
     
@@ -39,7 +39,7 @@
       <label> <svg class="icon">
           <use xlink:href="#icon-photo"> </use>
         </svg><span class="hidden">Imagen Producto</span></label>
-      <input type="file" type="text" name="fotos_p" class="form__input" placeholder="foto_p" accept=".jpg, .png, .gif, .pdf" required>
+      <input type="file" type="text" name="fotos_p" class="form__input" placeholder="foto_p" accept=".jpg, .png, .gif, .pdf" >
     </div>
     
 
