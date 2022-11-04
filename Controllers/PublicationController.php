@@ -18,21 +18,29 @@ class PublicationsController extends Publicaction{
         $this->resenas_p = $resenas_p;
         $this->precios_p = $precios_p;
 
-        $instanciapublicacion = $this->GuardarPublicacion();
+        $this->GuardarPublicacion();
         $this->RedirectPublicaciones();
          
     }
 }
 
-if(isset($_POST['action']) && $_POST['action']=='insertar'){
+if(isset($_POST['action']) && $_POST['action']=='insertarP'){
     $publicationcontroller = new PublicationsController();
+    if ($_FILES){
+        $fotos_p = $_FILES['fotos_p']['publicacion'];
+        $fototemporal = $_FILES['fotos_p']['tmp_publicacion'];
+        $foto_p_url = "../Views/Images/$fotos_p";
+    }
     $publicationcontroller->AlistarPublicacion(
     $_POST['nombre_p'],
     $_POST['info_p'],
     $fotos_p,
     $foto_p_url,
     $_POST['resenas_p'],
-    $_POST['precios_p']
-    );
+    $_POST['precios_p']);
+    
+}
+else{
+    echo "No se ha enviado nada";
 }
 ?>

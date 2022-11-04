@@ -21,31 +21,33 @@
   <form action="../Controllers/PublicationController.php" method="POST" class="form login">
 
     <div class="form__field">
-      <label for="nombre_p"><svg class="icon">
+      <label"><svg class="icon">
           <use xlink:href="#icon-basket"></use>
         </svg><span class="hidden">Nombre Del Producto</span></label>
-      <input id="product_name" type="text" name="nombre_P" class="form__input" placeholder="Nombre del producto" required>
+      <input type="hidden" name="action" value="insert">
+      <input  type="text"  name="nombre_p" class="form__input" placeholder="Nombre del producto" required>
     </div>
     
     <div class="form__field">
-      <label for="info_p"><svg class="icon">
-          <use xlink:href="#icon-info"></use>
+      <label> <svg class="icon">
+          <use xlink:href="#icon-info"> </use>
         </svg><span class="hidden">Información del producto</span></label>
-      <input id="info_p" type="text" name="info_p" class="form__input" placeholder="info_p" >
+      <input  type="text" name="info_p" class="form__input" placeholder="info_p" >
     </div>
 
     <div class="form__field">
-      <label for="foto_p"><svg class="icon">
-          <use xlink:href="#icon-photo"></use>
+      <label> <svg class="icon">
+          <use xlink:href="#icon-photo"> </use>
         </svg><span class="hidden">Imagen Producto</span></label>
-      <input type="file" id="foto_p" type="text" name="photo_p" class="form__input" placeholder="foto_p" accept=".jpg, .png, .gif, .pdf" required>
+      <input type="file" type="text" name="fotos_p" class="form__input" placeholder="foto_p" accept=".jpg, .png, .gif, .pdf" required>
     </div>
+    
 
     <div class="form__field">
-      <label for="precios_p"><svg class="icon">
+      <label><svg class="icon">
           <use xlink:href="#icon-price"></use>
         </svg><span class="hidden">Precio Del Producto</span></label>
-      <input id="precios_p" type="text" name="precios_p" class="form__input" placeholder="Precio del producto" required>
+      <input type="text" name="precios_p" class="form__input" placeholder="Precio del producto" required>
     </div>
 
 
@@ -60,6 +62,9 @@
     </svg></p>
 
 </div>
+
+
+
 
 <!-- //  ICONO PRODUCTO  -->
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-basket" viewBox="0 0 16 16"> 

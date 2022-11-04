@@ -1,4 +1,5 @@
 <?php
+include_once '../Config/Conexion.php';
 class Publicaction{
     protected $id_p;
     protected $nombre_p; // 1
@@ -11,9 +12,9 @@ class Publicaction{
 
     protected function GuardarPublicacion()
     {
-        include_once '..Config/Conexion.php';
+        
         $conexion = new Conexion();
-        $sql = 'INSERT INTO tbl_publicaciones (nombre_p,info_p,fotos_p,foto_p_url,resenas_p,precios_p) VALUES (?,?,?,?,?,?)';
+        $sql = "INSERT INTO tbl_publicaciones (nombre_p,info_p,fotos_p,foto_p_url,resenas_p,precios_p) VALUES (?,?,?,?,?,?)";
         $insertar = $conexion->stm->prepare($sql);
         $insertar->bindParam(1,$this->nombre_p);
         $insertar->bindParam(2,$this->info_p);
