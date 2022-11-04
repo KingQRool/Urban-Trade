@@ -26,7 +26,7 @@
             <div class="extra content">
                 <span>
                     <i class="edit icon"></i>
-                    <button onclick="actualizar(<?php echo $usuario->id_u; ?>)">Actualizar</button>
+                    <button onclick="actualizar(<?php echo $usuario->id_u; ?>)">Actualizar Datos</button>
                 </span>
                 <span class="right floated">
                     <i class="trash icon"></i>
