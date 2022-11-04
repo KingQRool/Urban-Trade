@@ -30,29 +30,27 @@ public function CargoVistaRegistrarse()
     //     header("location: ../ActualizarRegistro.php");
     // }
 
-        public function AlistarInformacion($nombreu,$emailu,$contrasena,$centrou,$foto,$foto_url)
+        public function AlistarInformacion($nombre_u,$email_u,$contrasena_u,$centro_u,$foto,$foto_url)
         {
-        $this->nombreu = $nombreu;
-        $this->emailu = $emailu;
-        $contrasenaincrip = password_hash($contrasena,PASSWORD_ARGON2ID);
+        $this->nombre_u = $nombre_u;
+        $this->email_u = $email_u;
+        $contrasenaincrip = password_hash($contrasena_u,PASSWORD_ARGON2ID);
         $this->contrasenau = $contrasenaincrip;
-        $this->centrou = $centrou;
-        $this->foto = $foto;
-        $this->foto_url = $foto_url;
+        $this->centro_u = $centro_u;
         $this->GuardarUsuario();
         $this->RedirectLogin();
         
         }
 
-        public function VerificarLogin($emailu,$contrasenau)
+        public function VerificarLogin($email_u,$contrasenau)
         {
-            $this->emailu = $emailu;
+            $this->email_u = $email_u;
             $this->contrasenau = $contrasenau;
             $datosusuario = $this->ConsultarUsuarioEnBd();
             foreach($datosusuario as $u) {}
             if(password_verify($this->contrasenau,$u->contrasenau)){
                 echo "La contraseña si coincide";
-                $_SESSION['nombreu'] = $u->nombreu;
+                $_SESSION['nombre_u'] = $u->nombre_u;
                 header("location: UsersController.php?action=inicio");
             }else{
                 echo "La contraseña es incorrecta";
@@ -64,13 +62,13 @@ public function CargoVistaRegistrarse()
         header("location: UsersController.php?action=login");
     }
 
-    // public function AlistarInformacionAct($nombreu,$emailu,$contrasena,$centrou)
+    // public function AlistarInformacionAct($nombre_u,$email_u,$contrasena_u,$centro_u)
     //     {
-    //     $this->nombreu = $nombreu;
-    //     $this->emailu = $emailu;
-    //     $contrasenaincrip = password_hash($contrasena,PASSWORD_ARGON2ID);
+    //     $this->nombre_u = $nombre_u;
+    //     $this->email_u = $email_u;
+    //     $contrasenaincrip = password_hash($contrasena_u,PASSWORD_ARGON2ID);
     //     $this->contrasenau = $contrasenaincrip;
-    //     $this->centrou = $centrou;
+    //     $this->centro_u = $centro_u;
         
     //     }
 }
@@ -91,17 +89,17 @@ if(isset($_GET['action']) && $_GET['action']=='inicio'){
 if(isset($_POST['action']) && $_POST['action']=="insertar"){
     $usercontroller = new UserController();
     $usercontroller->AlistarInformacion(
-    $_POST['nombreu'],
-    $_POST['emailu'],
+    $_POST['nombre_u'],
+    $_POST['email_u'],
     $_POST['contrasenau'],
-    $_POST['centrou'],
+    $_POST['centro_u'],
     $_POST['foto'],
     $_POST['foto_url'],
 ); 
 }
 if(isset($_POST['action']) && $_POST['action'] == "login"){
     $usercontroller = new UserController();
-    $usercontroller->VerificarLogin($_POST['emailu'],$_POST['contrasenau']);
+    $usercontroller->VerificarLogin($_POST['email_u'],$_POST['contrasenau']);
 }
 if(isset($_GET['idu'])){
     $usercontroller = new UserController();

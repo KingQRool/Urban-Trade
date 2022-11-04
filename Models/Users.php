@@ -16,7 +16,7 @@ class User{
     {
         include '../Config/Conexion.php';
         $conexion = new Conexion();
-        $sql = "INSERT INTO usuariosr (nombreu,emailu,contrasenau,centrou,foto,foto_url) VALUES (?,?,?,?,?,?)";
+        $sql = "INSERT INTO tbl_usuarios_registrado (nombreu,emailu,contrasenau,centrou,foto,foto_url) VALUES (?,?,?,?,?,?)";
         $insertar = $conexion->stm->prepare($sql);
         $insertar->bindParam(1,$this->nombreu);
         $insertar->bindParam(2,$this->emailu);
