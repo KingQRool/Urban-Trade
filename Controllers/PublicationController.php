@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-include_once '..Models/Publicatios.php';
+include_once '../Models/Publications.php';
 class PublicationsController extends Publicaction{
 
     public function RedirectPublicaciones()
@@ -29,10 +29,10 @@ if(isset($_POST['action']) && $_POST['action']=='insertar'){
     $publicationcontroller->AlistarPublicacion(
     $_POST['nombre_p'],
     $_POST['info_p'],
-    $_POST['fotos_p'],
-    $_POST['foto_p_url'],
+    $fotos_p,
+    $foto_p_url,
     $_POST['resenas_p'],
-    $_POST['precios_p'],
+    $_POST['precios_p']
     );
 }
 ?>

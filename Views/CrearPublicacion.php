@@ -18,7 +18,7 @@
 </div>
 <div class="grid">
 
-  <form action="https://httpbin.org/post" method="POST" class="form login">
+  <form action="../Controllers/PublicationController.php" method="POST" class="form login">
 
     <div class="form__field">
       <label for="nombre_p"><svg class="icon">

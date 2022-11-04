@@ -31,6 +31,6 @@ class Publicaction{
 //         $sql = "DELETE FROM tbl_publicaciones WHERE id_p='$borrar'";
 //         $publicacion = $conexion->stm->prepare($sql);
 //         $publicacion->execute();
-// }
+}
 
 ?>
