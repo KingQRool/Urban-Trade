@@ -2,7 +2,7 @@
 session_start();
 
 include_once '..Models/Publicatios.php';
-class PublicatiosController extends Publicaction{
+class PublicationsController extends Publicaction{
 
     public function RedirectPublicaciones()
     {
