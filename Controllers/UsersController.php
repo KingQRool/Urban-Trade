@@ -18,17 +18,21 @@ class UserController extends User
     }
     public function CargoVistaInicio()
     {
-        include '../Index.php';
+        include '../Views/Usuario/IndexUser.php';
     }
     public function CargarLista()
     {
         include '../ListadoPersonas.php';
     }
+    public function CargoVistaPerfil()
+    {
+        $objetoretornadousuario = $this->BuscarUsuarioVista();
+        include '../Views/Usuario/Viewperfil.php';
+    }
     public function RedireccionarLista()
     {
         header("location: ../ListadoPersonas.php");
     }
-
 
     public function AlistarInformacion($correo_u,$nombre_u,$password,$centro_u)
     {
@@ -51,11 +55,20 @@ class UserController extends User
         foreach($usuarioobjeto as $usuario){};
         if(password_verify($contrasena_u,$usuario->contrasena_u)){
             // echo "La contraseña si coincide";
+            $_SESSION['id_u'] = $usuario->id_u;
             $_SESSION['nombre_u'] = $usuario->nombre_u;
             $this->CargoVistaInicio();
         }else{
             echo 'contraseña incorrecta';
         }
+    }
+
+    public function ActualizarUsuario($id_u){
+        $this->id_u = $id_u;
+        // echo $this->idj;
+        $objetoretornadousuario = $this->MostrarUsuario();
+        CargoVistaPerfil();
+
     }
 
     public function RedirectLogin()
@@ -69,6 +82,11 @@ if (isset($_GET['action']) && $_GET['action'] == 'register') {
     $usercontroller = new UserController();
     $usercontroller->CargoVistaRegistrarse();
 }
+if (isset($_GET['action']) && $_GET['action'] == 'actualizar') {
+    $usercontroller = new UserController();
+    $usercontroller->ActualizarUsuario($_GET['id_u']);
+}
+
 if (isset($_GET['action']) && $_GET['action'] == 'login') {
     $usercontroller = new UserController();
     $usercontroller->CargoVistaLogin();
@@ -78,6 +96,11 @@ if (isset($_GET['action']) && $_GET['action'] == 'inicio') {
     $usercontroller = new UserController();
     $usercontroller->CargoVistaInicio();
 }
+if (isset($_GET['action']) && $_GET['action'] == 'Viewperfil') {
+    $usercontroller = new UserController();
+    $usercontroller->CargoVistaPerfil();
+}
+
 if (isset($_POST['action']) && $_POST['action'] == "insertar") {
     $usercontroller = new UserController();
     $usercontroller->AlistarInformacion(

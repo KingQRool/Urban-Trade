@@ -27,7 +27,6 @@
                         <li class="nav-item"><a class="nav-link" href="http://localhost/Urban-Trade/Controllers/UsersController.php?action=login">Inicio de sesion</a></li>
                         <li class="nav-item"><a class="nav-link" href="Views/Usuario/Publicaciones.php">Publicaciones</a></li>
                         <li class="nav-item"><a class="nav-link" href="Views/Usuario/Tiendas.php">Tiendas U.T</a></li>
-                        <li class="nav-item"><a class="nav-link" href="views/Usuario/Perfil.php">Mi Perfil</a></li>
                     </ul>
                 </div>
             </div>

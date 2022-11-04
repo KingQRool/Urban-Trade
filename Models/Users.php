@@ -32,6 +32,15 @@ class User{
         $usuarioobjeto = $usuario->fetchAll(PDO :: FETCH_OBJ);
         return $usuarioobjeto;
     }
+    public function BuscarUsuarioVista()
+    {
+        $conexion = new Conexion();
+        $sql = "SELECT * FROM tbl_usuarios_registrado";
+        $usuario = $conexion->stm->prepare($sql);
+        $usuario->execute();
+        $usuarioobjeto = $usuario->fetchAll(PDO :: FETCH_OBJ);
+        return $usuarioobjeto;
+    }
 
     protected function MostrarUsuario(){
         $conexion = new Conexion();

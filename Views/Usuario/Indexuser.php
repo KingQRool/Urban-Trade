@@ -22,10 +22,12 @@
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="../index.html"> Cerrar Sesión </a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://localhost/PROYECTO%20URBAN%20TRADE/Proyecto%200.4/Views/Publicaciones.php">Publicaciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://localhost/PROYECTO%20URBAN%20TRADE/Proyecto%200.4/Views/Tiendas.php">Tiendas U.T</a></li>
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="http://localhost/Urban-Trade/Controllers/UsersController.php?action=register">Registro</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://localhost/Urban-Trade/Controllers/UsersController.php?action=login">Inicio de sesion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Views/Usuario/Publicaciones.php">Publicaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Views/Usuario/Tiendas.php">Tiendas U.T</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://localhost/Urban-Trade/Controllers/UsersController.php?action=Viewperfil">Mi Perfil</a></li>
                     </ul>
                 </div>
             </div>
@@ -35,9 +37,7 @@
             <div class="container">
                 <div class="masthead-subheading">¡Bienvenido A!</div>
                 <div class="masthead-heading text-uppercase">Urban Trade</div>
-               <div class="masthead-subheading"> <p><?php echo $_SESSION['nombreu'];?></p></div>
-
-    
+               <div class="masthead-subheading"> <p><?php echo $_SESSION['nombre_u'];?></p></div>
             </div>
         </header>
         <!-- CARROUSEL   Cambiar color de fondo style="background color" -->
