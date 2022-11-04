@@ -402,6 +402,9 @@ fieldset {
   margin: 0;
   border: 0;
 }
+#icono_usuario{
+  margin-top: -6px;
+}
 
 legend {
   float: left;

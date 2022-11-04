@@ -50,11 +50,17 @@ class User{
         $objetoretornadousuario = $mostrar->fetchAll(PDO::FETCH_OBJ);
         return $objetoretornadousuario;
     }
-    public function BorrarUsuario($borrar){
+    public function EliminarUsuario(){
         $conexion = new Conexion();
-        $sql = "DELETE FROM usuariosr WHERE id_u='$borrar'";
+        $sql = "DELETE FROM tbl_usuarios_registrado WHERE id_u='$this->id_u'";
         $usuario = $conexion->stm->prepare($sql);
         $usuario->execute();
+    }
+    protected function ActualizarUsuarioBd(){
+        $conexion = new Conexion();
+        $sql = "UPDATE tbl_usuarios_registrado SET nombre_u='$this->nombre_u',centro_u='$this->centro_u',contrasena_u='$this->contrasena_u',centro_u='$this->centro_u' WHERE id_u='$this->id_u'";
+        $actualizar = $conexion->stm->prepare($sql);
+        $actualizar->execute();
     }
 
 }
