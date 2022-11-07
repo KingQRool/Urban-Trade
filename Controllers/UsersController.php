@@ -95,6 +95,7 @@ class UserController extends User
         $this->contrasena_u = $contrasena_u;
         $this->centro_u = $centro_u;
         $this->ActualizarUsuarioBd();
+        sess
         $this->CargoVistaPerfil();
     }
 

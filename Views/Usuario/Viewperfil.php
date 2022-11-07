@@ -23,9 +23,11 @@
       <div class="image">
         <img src="../Public/Img/usuario.png">
       </div>
+      
       <div class="content">
         <a class="header"><?php echo $_SESSION['nombre_u'];?></a>
       </div>
+      
     <div>
         <i class="fa-solid fa-trash"></i>
         <button onclick="borrar(<?php echo $_SESSION['id_u'];?>)">Eliminar Perfil</button>
