@@ -41,6 +41,9 @@ class Publicaction{
             nombre_p='$this->nombre_p',info_p='$this->info_p',fotos_p='$this->fotos_p', precios_p='$this->precios_p' WHERE id_p=$act";
             $mostrar = $conexion->stm->prepare($sql);
             $mostrar->execute();
+            $objetoretornadopublicacion = $mostrar->fetchAll(PDO::FETCH_OBJ);
+            // return var_dump($objetoretornadopublicacion);
+            return $objetoretornadopublicacion;
         }
 //     public function BorrarPublicacion($borrar) {
 //         include '../Config/Conexion.php';

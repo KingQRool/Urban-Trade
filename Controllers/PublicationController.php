@@ -12,7 +12,10 @@ class PublicationsController extends Publicaction{
     {
         include '../Views/index.php';
     }
-
+    public function CargoVistaPublicacion()
+    {
+        include_once '../Views\Publicaciones.php';
+    }
     public function AlistarPublicacion($nombre_p,$info_p,$fotos_p,$foto_p_url,$precios_p)
     {
         $this->nombre_p = $nombre_p;
@@ -28,7 +31,21 @@ class PublicationsController extends Publicaction{
         // return $instanciajugador;
          
     }
-}
+    public function ActPublicaciones($act)
+    {
+        // ($id_p)
+        $this->id_p = $act;
+        $objetoretornadopublicacion = $this->CargoVistaPublicacion();
+        require '../Views/Publicacion';
+
+        
+    }
+    }
+    if(isset($_GET['action']) && $_GET['action']=='Subir Producto'){
+        $usercontroller = new PublicationsController();
+        $usercontroller->RedirectPublicaciones();
+        }
+
 
 if(isset($_POST['action']) && $_POST['action']=='insertarP'){
     $publicationcontroller = new PublicationsController();
@@ -55,16 +72,17 @@ if(isset($_GET['id_p'])){
     $publicationcontroller->CargoVistaInicio();
 
 }
-if(isset($_POST['action']) && $_POST['action'] == "act"){
+if(isset($_POST['action']) && $_POST['action'] == "confirm"){
     $publicationcontroller = new publicationscontroller();
     $publicationcontroller->ActPublicaciones($_POST['nombre_p'],
     $_POST['info_p'],
     $_POST['fotos_p'],
     $_POST['precios_p']);
 
-    $publicationcontroller->ActPublicaciones($_POST['confirmacion']);
+    $publicationcontroller->ActPublicaciones($_POST['act']);
     $publicationcontroller->CargoVistaInicio();
-    
+    // require '../Views/Publicaciones/ActPublicaciones.php';
+    // return $objetoretornado;
 } 
 
 ?>

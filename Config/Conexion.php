@@ -9,7 +9,7 @@ class Conexion{
         try{
             $this->stm = new PDO("mysql:host=localhost;dbname=urbantrade",'root','');
         }
-        catch (PDOExeption $error)
+        catch (PDOException $error)
         {
             echo "error en :->" . $error->getmessage();
         }

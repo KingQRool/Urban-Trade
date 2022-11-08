@@ -1,10 +1,16 @@
+<?php
+// include '../PublicationController'
+foreach ($objetoretornadopublicacion as $publicacion) {
+  // ...
+  }
+?>  
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Public/css/register.css">
+    <link rel="stylesheet" href="../../Public\css\register.css">
     <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
@@ -16,50 +22,36 @@
       INICIO 
     </a>
 </div>
-
-<div class="Inicio">
-    <a href="ActPublicaciones.php">
-      <i class="fa-solid fa-house"></i>
-      actualizar publicacion
-    </a>
-</div>
 <div class="grid">
 
-  <form action="../Controllers/PublicationController.php" method="POST" class="form login">
+  <form action="../../Controllers/PublicationController.php" method="POST" class="form login">
 
     <div class="form__field">
-      <label"><svg class="icon">
-          <use xlink:href="#icon-basket"></use>
-        </svg><span class="hidden">Nombre Del Producto</span></label>
-      <input type="hidden" name="action" value="insertarP">
-      <input  type="text"  name="nombre_p" class="form__input" placeholder="Nombre del producto" required>
+    <input type="text" class="input" name="nombrej" id="nombrej" placeholder="Ingrese Su Nombre" value="<?php echo $publicacion->nombre_p; ?>" required>
+            <label for="" class="label">Ingrese Su Nombre</label>
     </div>
     
+    <input type="hidden" name="action" value="confirm">
+    <input type="hidden" name="id_p" value="act">
     <div class="form__field">
-      <label> <svg class="icon">
-          <use xlink:href="#icon-info"> </use>
-        </svg><span class="hidden">Información del producto</span></label>
-      <input  type="text" name="info_p" class="form__input" placeholder="info_p" >
+    <input type="text" class="input" name="nombrej" id="nombrej" placeholder="Ingrese Su Nombre" value="<?php echo $publicacion->info_p; ?>" required>
+            <label for="" class="label">Ingrese La Nueva Información</label>
     </div>
 
     <div class="form__field">
-      <label> <svg class="icon">
-          <use xlink:href="#icon-photo"> </use>
-        </svg><span class="hidden">Imagen Producto</span></label>
-      <input type="file" type="text" name="fotos_p" class="form__input" placeholder="foto_p" accept=".jpg, .png, .gif, .pdf" >
+    <input type="text" class="input" name="nombrej" id="nombrej" placeholder="Ingrese Su Nombre" value="<?php echo $publicacion->fotos_p; ?>" required>
+            <label for="" class="label">Ingrese La Nueva Foto</label>
     </div>
     
 
     <div class="form__field">
-      <label><svg class="icon">
-          <use xlink:href="#icon-price"></use>
-        </svg><span class="hidden">Precio Del Producto</span></label>
-      <input type="text" name="precios_p" class="form__input" placeholder="Precio del producto" required>
+    <input type="text" class="input" name="nombrej" id="nombrej" placeholder="Ingrese Su Nombre" value="<?php echo $publicacion->precio_p; ?>" required>
+            <label for="" class="label">Ingrese El Nuevo Precio</label>
     </div>
 
 
     <div class="form__field">
-      <input type="submit" value="Subir Producto">
+      <input type="submit" value="Actualizar Producto">
     </div>
 
   </form>
@@ -69,7 +61,6 @@
     </svg></p>
 
 </div>
-<a id="myAnchor" class="btn btn-primary btn-xl text-uppercase" href="CrearPublicacion.php">CREAR UNA PUBLICAION</a>
 
 
 

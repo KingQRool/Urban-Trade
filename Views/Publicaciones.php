@@ -78,7 +78,7 @@ require '../Inc/Header.php';
           <h1 class="text-center" id="todaspublicaciones">TODAS LAS PUBLICACIONES</h1>
         </div>
       </div><br><br>
-      <a id="myAnchor" class="btn btn-primary btn-xl text-uppercase" href="CrearPublicacion.php">CREAR UNA PUBLICAION</a>
+      <a id="myAnchor" class="btn btn-primary btn-xl text-uppercase" href="Publicaciones\CrearPublicacion.php">CREAR UNA PUBLICAION</a>
       <br>
       <br>
       
