@@ -60,6 +60,7 @@ class User{
         $conexion = new Conexion();
         $sql = "UPDATE tbl_usuarios_registrado SET nombre_u='$this->nombre_u',centro_u='$this->centro_u',contrasena_u='$this->contrasena_u',centro_u='$this->centro_u' WHERE id_u='$this->id_u'";
         $actualizar = $conexion->stm->prepare($sql);
+        $_SESSION['nombre_u'] = $this->nombre_u;
         $actualizar->execute();
     }
 

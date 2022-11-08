@@ -56,7 +56,7 @@
 
 
     <div class="form__field">
-      <input type="submit" value="insertar">
+      <input type="submit" value="registrarse">
     </div>
 
   </form>

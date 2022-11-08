@@ -54,13 +54,11 @@ class UserController extends User
         $this->correo_u = $correo_u;
         $this->contrasena_u = $contrasena_u;
         $usuarioobjeto = $this->BuscarUsuario();
-        // echo $correo_u;
-        // echo $contrasena_u;
         foreach($usuarioobjeto as $usuario){};
         if(password_verify($contrasena_u,$usuario->contrasena_u)){
-            // echo "La contraseña si coincide";
             $_SESSION['id_u'] = $usuario->id_u;
             $_SESSION['nombre_u'] = $usuario->nombre_u;
+            $_SESSION['correo_u'] = $usuario->correo_u;
             $this->CargoVistaInicio();
         }else{
             echo 'contraseña incorrecta';
@@ -69,14 +67,12 @@ class UserController extends User
 
     public function ActualizarUsuario($id_u){
         $this->id_u = $id_u;
-        // echo $this->idj;
         $objetoretornadousuario = $this->MostrarUsuario();
         require '../Views/Usuario/Update.php';
 
     }
     public function EliminarInfoUsuario($id_u){
         $this->id_u = $id_u;
-        // echo $this->idj;
         $this->EliminarUsuario();
         require '../Index.php';
 

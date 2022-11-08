@@ -44,7 +44,7 @@ foreach($objetoretornadousuario as $usuario){
       <label for="login__password"><svg class="icon">
           <use xlink:href="#icon-email"></use>
         </svg><span class="hidden">Correo</span></label>
-      <input id="login__email" type="email" name="correo_u" class="form__input" placeholder="Correo" value="<?php echo $usuario->correo_u; ?>" required>
+      <input id="login__email" type="email" name="correo_u" class="form__input" placeholder="Correo" value="<?php echo $usuario->correo_u; ?>">
     </div>
 
     <div class="form__field">

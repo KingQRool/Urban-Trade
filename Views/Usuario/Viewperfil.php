@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="../Public/Css/semantic.css">
     <link rel="icon" type="image/x-icon" href="../Public/img/logo.ico" />
     <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
-    
+    <link rel="stylesheet" href="../Public/Css/perfilusuario.css">
 </head>
 <body>
     <div class="ui vertical menu">

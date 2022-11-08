@@ -43,7 +43,7 @@
           <input id="login__password" type="password" name="contrasena_u" class="form__input" placeholder="Contraseña" required>
         </div>
         <div class="form__field">
-          <input type="submit">
+          <input type="submit" value="ingresar">
         </div>
 
       </form>
