@@ -89,7 +89,7 @@ body {
   font-weight: var(--bodyFontWeight);
   line-height: var(--bodyLineHeight);
   margin: 0;
-  min-block-size: 100vh;
+  min-block-size: 80vh;
 }
 
 /* modules/anchor.css */
@@ -168,35 +168,42 @@ input[type="submit"] {
 .login {
   color: var(--loginColor);
 }
+.logo-ut{
+  padding-bottom: 10px;
+}
 
 .login label,
-.login input[type="text"],
-.login input[type="password"],
-.login input[type="submit"] {
-  border-radius: var(--loginBorderRadus);
-  padding: 1rem;
-}
-
-.login label {
-  background-color: var(--loginLabelBackgroundColor);
-  border-bottom-right-radius: 0;
-  border-top-right-radius: 0;
-  padding-inline: 1.25rem;
-}
-
-.login input[type="password"],
-.login input[type="text"] {
-  background-color: var(--loginInputBackgroundColor);
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 0;
-}
-
-.login input[type="password"]:focus,
-.login input[type="password"]:hover,
-.login input[type="text"]:focus,
-.login input[type="text"]:hover {
-  background-color: var(--loginInputHoverBackgroundColor);
-}
+  .login input[type="text"],
+  .login input[type="password"],
+  .login input[type="email"],
+  .login input[type="submit"] {
+    border-radius: var(--loginBorderRadus);
+    padding: 1rem;
+  }
+  
+  .login label {
+    background-color: var(--loginLabelBackgroundColor);
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    padding-inline: 1.25rem;
+  }
+  
+  .login input[type="password"],
+  .login input[type="email"],
+  .login input[type="text"] {
+    background-color: var(--loginInputBackgroundColor);
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+  }
+  
+  .login input[type="password"]:focus,
+  .login input[type="password"]:hover,
+  .login input[type="email"]:focus,
+  .login input[type="email"]:hover,
+  .login input[type="text"]:focus,
+  .login input[type="text"]:hover {
+    background-color: var(--loginInputHoverBackgroundColor);
+  }
 
 .login input[type="submit"] {
   background-color: var(--loginSubmitBackgroundColor);

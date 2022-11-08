@@ -1,5 +1,5 @@
 <?php
-require '../Inc/Header.php';
+require '../../Inc/Header.php';
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -8,8 +8,8 @@ require '../Inc/Header.php';
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Publicaciones</title>
-<link href="../Public\css\styles.css" rel="stylesheet"/>
-<link rel="stylesheet" href="../Public/css/stylepubli-tiend.css">
+<link href="../../Public\Css\styles.css" rel="stylesheet"/>
+<link rel="stylesheet" href="../../Public/Css/stylepubli-tiend.css">
 <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
 </head>
 <body id="page-top">
@@ -340,5 +340,5 @@ require '../Inc/Header.php';
 
 </html>
 <?php
-require '../Inc/Footer.php';
+require '../../Inc/Footer.php';
 ?>

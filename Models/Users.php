@@ -1,12 +1,11 @@
 <?php
+include_once '../Config/Conexion.php';
 class User{
-    protected $idu;
-    protected $nombreu; //1//
-    protected $emailu; //2//
-    protected $contrasenau; //3//
-    protected $centrou; //4//
-    protected $fotoj; //5//
-    protected $foto_url; //6//
+    protected $id_u;
+    protected $nombre_u; //1//
+    protected $correo_u; //2//
+    protected $contrasena_u; //3//
+    protected $centro_u; //4//
 
 
 
@@ -14,52 +13,58 @@ class User{
 
     protected function GuardarUsuario()
     {
-        include '../Config/Conexion.php';
         $conexion = new Conexion();
-        $sql = "INSERT INTO usuariosr (nombreu,emailu,contrasenau,centrou,foto,foto_url) VALUES (?,?,?,?,?,?)";
+        $sql = "INSERT INTO tbl_usuarios_registrado(correo_u,nombre_u,contrasena_u,centro_u) VALUES (?,?,?,?)";
         $insertar = $conexion->stm->prepare($sql);
-        $insertar->bindParam(1,$this->nombreu);
-        $insertar->bindParam(2,$this->emailu);
-        $insertar->bindParam(3,$this->contrasenau);
-        $insertar->bindParam(4,$this->centrou);
-        $insertar->bindParam(5,$this->foto);
-        $insertar->bindParam(6,$this->foto_url);
+        $insertar->bindParam(1,$this->correo_u);
+        $insertar->bindParam(2,$this->nombre_u);
+        $insertar->bindParam(3,$this->contrasena_u);
+        $insertar->bindParam(4,$this->centro_u);
         $insertar->execute();
 
-        echo "guardo con exito";
     }
-    public function ConsultarUsuarioEnBd()
+    public function BuscarUsuario()
     {
-        include '../Config/Conexion.php';
         $conexion = new Conexion();
-        $sql = "SELECT * FROM usuariosr WHERE emailu='$this->emailu'";
+        $sql = "SELECT * FROM tbl_usuarios_registrado WHERE correo_u='$this->correo_u'";
         $usuario = $conexion->stm->prepare($sql);
         $usuario->execute();
-        $usuarioobjeto = $usuario->fetchAll(PDO::FETCH_OBJ);
+        $usuarioobjeto = $usuario->fetchAll(PDO :: FETCH_OBJ);
         return $usuarioobjeto;
     }
-    public function BorrarUsuario($borrar){
-        include '../Config/Conexion.php';
+    public function BuscarUsuarioVista()
+    {
         $conexion = new Conexion();
-        $sql = "DELETE FROM usuariosr WHERE idu='$borrar'";
+        $sql = "SELECT * FROM tbl_usuarios_registrado";
+        $usuario = $conexion->stm->prepare($sql);
+        $usuario->execute();
+        $usuarioobjeto = $usuario->fetchAll(PDO :: FETCH_OBJ);
+        return $usuarioobjeto;
+    }
+
+    protected function MostrarUsuario(){
+        $conexion = new Conexion();
+        $sql = "SELECT * FROM tbl_usuarios_registrado WHERE id_u='$this->id_u'";
+        $mostrar = $conexion->stm->prepare($sql);
+        $mostrar->execute();
+        $objetoretornadousuario = $mostrar->fetchAll(PDO::FETCH_OBJ);
+        return $objetoretornadousuario;
+    }
+    public function EliminarUsuario(){
+        $conexion = new Conexion();
+        $sql = "DELETE FROM tbl_usuarios_registrado WHERE id_u='$this->id_u'";
         $usuario = $conexion->stm->prepare($sql);
         $usuario->execute();
     }
+    protected function ActualizarUsuarioBd(){
+        $conexion = new Conexion();
+        $sql = "UPDATE tbl_usuarios_registrado SET nombre_u='$this->nombre_u',centro_u='$this->centro_u',contrasena_u='$this->contrasena_u',centro_u='$this->centro_u' WHERE id_u='$this->id_u'";
+        $actualizar = $conexion->stm->prepare($sql);
+        $_SESSION['nombre_u'] = $this->nombre_u;
+        $actualizar->execute();
+    }
 
-//     public function ActUsuario($idu)
-//     {
-//         include '../Config/Conexion.php';
-//         $conexion = new Conexion();
-//         $sql = "SELECT * FROM usuariosr WHERE idu=$idu";
-      
-        
-//         $consulta = $conexion->stm->prepare($sql);
-// $consulta->execute();
-// $persona = $consulta->fetchAll(PDO::FETCH_OBJ);
-// // var_dump($persona);
-// foreach($persona as $p){}
-//     }
 }
 
     
-    ?>
+?>

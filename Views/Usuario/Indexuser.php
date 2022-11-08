@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Urban Trade</title>
-        <link rel="icon" type="image/x-icon" href="../Public/img/crear.jpg" />
+        <link rel="icon" type="image/x-icon" href="../Public/img/logo.ico" />
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Tema principal CSS -->
         <link href="../Public\css\styles.css" rel="stylesheet"/>
@@ -22,10 +22,14 @@
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                        <li class="nav-item"><a class="nav-link" href="../index.html"> Cerrar Sesión </a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://localhost/PROYECTO%20URBAN%20TRADE/Proyecto%200.4/Views/Publicaciones.php">Publicaciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://localhost/PROYECTO%20URBAN%20TRADE/Proyecto%200.4/Views/Tiendas.php">Tiendas U.T</a></li>
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="Views/Usuario/Publicaciones.php">Publicaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Views/Usuario/Tiendas.php">Tiendas U.T</a></li>
+                        <li class="nav-item" id="icono_usuario"><a class="nav-link" href="http://localhost/Urban-Trade/Controllers/UsersController.php?action=Viewperfil"><svg width="32" height="32" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                        </svg></a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -35,9 +39,7 @@
             <div class="container">
                 <div class="masthead-subheading">¡Bienvenido A!</div>
                 <div class="masthead-heading text-uppercase">Urban Trade</div>
-               <div class="masthead-subheading"> <p><?php echo $_SESSION['nombreu'];?></p></div>
-
-    
+               <div class="masthead-subheading"> <p><?php echo $_SESSION['nombre_u'];?></p></div>
             </div>
         </header>
         <!-- CARROUSEL   Cambiar color de fondo style="background color" -->
@@ -204,7 +206,7 @@
                     <p class="section-subheading text-muted"></p>
                 </div>
                 <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="../Public/img/integrante1.jpeg" alt="..." />
                             <h4>Juan Esteban Rendon </h4>
@@ -213,7 +215,7 @@
                             <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="../Public/img/integrante2.jpeg" alt="..." />
                             <h4>Edier Mauricio Giraldo</h4>
@@ -221,7 +223,15 @@
                             <a class="btn btn-dark btn-social mx-2" href="https://github.com/EYIYER"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="../Public/img/integrante2.jpeg" alt="..." />
+                            <h4>Edier Mauricio Giraldo</h4>
+                            <p class="text-muted">"Esperenado sobrevivir a la entrega de fase"</p>
+                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/EYIYER"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-3">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="../Public/img/integrante3.jpeg" alt="Miguel Angel Vasquez" />
                             <h4>Miguel Angel Vasquez</h4>
