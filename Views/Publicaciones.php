@@ -1,5 +1,6 @@
 <?php
 require '../Inc/Header.php';
+
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -84,18 +85,18 @@ require '../Inc/Header.php';
       <div class="row" id="row">
    
       <div class="ui card">
-    <?php foreach($p as $jugadores) {}?>
+    <?php foreach($p as $publicaciones) {}?>
   <div class="image">
-    <img src="<?php echo $jugadores->fotos_p; ?>">
+    <img src="<?php echo $publicaciones->fotos_p; ?>">
   </div>
   <div class="content">
-    <a class="header"><?php echo $jugadores->nombre_p; ?></a>
+    <a class="header"><?php echo $publicaciones->nombre_p; ?></a>
     <div class="meta">
-      <span class="date"><?php echo $jugadores->info_p; ?><br>
-      <?php echo $jugadores->paisj; ?></span>
+      <span class="text"><?php echo $publicaciones->info_p; ?><br>
+      </span>
     </div>
     <div class="description">
-    <?php echo $jugadores->precios_p; ?>
+    <?php echo $publicaciones->precios_p; ?>
     </div>
   </div>
   <div class="extra content">
@@ -345,6 +346,7 @@ require '../Inc/Header.php';
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+  
 
 </body>
 

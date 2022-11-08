@@ -8,7 +8,10 @@ class PublicationsController extends Publicaction{
     {
         header("location:../Views\Publicaciones.php");
     }
-
+    public function CargoVistaInicio()
+    {
+        include '../Views/index.php';
+    }
 
     public function AlistarPublicacion($nombre_p,$info_p,$fotos_p,$foto_p_url,$precios_p)
     {
@@ -46,4 +49,22 @@ if(isset($_POST['action']) && $_POST['action']=='insertarP'){
 else{
     echo "No se ha enviado nada";
 }
+if(isset($_GET['id_p'])){
+    $publicationcontroller = new PublicationsController();
+    $publicationcontroller->BorrarPublicacion($_GET['id_p']);
+    $publicationcontroller->CargoVistaInicio();
+
+}
+if(isset($_POST['action']) && $_POST['action'] == "act"){
+    $publicationcontroller = new publicationscontroller();
+    $publicationcontroller->ActPublicaciones($_POST['nombre_p'],
+    $_POST['info_p'],
+    $_POST['fotos_p'],
+    $_POST['precios_p']);
+
+    $publicationcontroller->ActPublicaciones($_POST['confirmacion']);
+    $publicationcontroller->CargoVistaInicio();
+    
+} 
+
 ?>

@@ -16,13 +16,6 @@
       INICIO 
     </a>
 </div>
-
-<div class="Inicio">
-    <a href="ActPublicaciones.php">
-      <i class="fa-solid fa-house"></i>
-      actualizar publicacion
-    </a>
-</div>
 <div class="grid">
 
   <form action="../Controllers/PublicationController.php" method="POST" class="form login">
@@ -69,7 +62,6 @@
     </svg></p>
 
 </div>
-<a id="myAnchor" class="btn btn-primary btn-xl text-uppercase" href="CrearPublicacion.php">CREAR UNA PUBLICAION</a>
 
 
 

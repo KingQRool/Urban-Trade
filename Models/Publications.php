@@ -26,6 +26,22 @@ class Publicaction{
 
         echo "Se guardo el producto con exito";
     }
+
+        public function BorrarPublicacion($borrar){
+            include_once '../Config/Conexion.php';
+            $conexion = new Conexion();
+            $sql = "DELETE FROM tbl_publicaciones WHERE id_p='$borrar'";
+            $mostrar = $conexion->stm->prepare($sql);
+            $mostrar->execute();
+        }
+        public function ActPublicaciones($act){
+            include_once '../Config/Conexion.php';
+            $conexion = new Conexion();
+            $sql = "UPDATE tbl_publicaciones SET
+            nombre_p='$this->nombre_p',info_p='$this->info_p',fotos_p='$this->fotos_p', precios_p='$this->precios_p' WHERE id_p=$act";
+            $mostrar = $conexion->stm->prepare($sql);
+            $mostrar->execute();
+        }
 //     public function BorrarPublicacion($borrar) {
 //         include '../Config/Conexion.php';
 //         $conexion = new Conexion();
