@@ -17,12 +17,7 @@
     </a>
 </div>
 
-<div class="Inicio">
-    <a href="ActPublicaciones.php">
-      <i class="fa-solid fa-house"></i>
-      actualizar publicacion
-    </a>
-</div>
+
 <div class="grid">
 
   <form action="../../Controllers/PublicationController.php" method="POST" class="form login">
@@ -65,6 +60,9 @@
   </form>
 
   <p class="text--center">Ya tienes cuenta? <a href="login.php">Inicia Sesion</a> <svg class="icon">
+      <use xlink:href="#icon-arrow-right"></use>
+    </svg></p>
+    <p class="text--center">actualizar publicación <a href="ActPublicaciones.php">actualizar</a> <svg class="icon">
       <use xlink:href="#icon-arrow-right"></use>
     </svg></p>
 

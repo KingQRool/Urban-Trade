@@ -85,7 +85,7 @@ require '../Inc/Header.php';
       <div class="row" id="row">
    
       <div class="ui card">
-    <?php foreach($p as $publicaciones) {}?>
+    <?php foreach($_SESSION as $publicaciones) {}?>
   <div class="image">
     <img src="<?php echo $publicaciones->fotos_p; ?>">
   </div>
