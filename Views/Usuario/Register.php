@@ -30,7 +30,7 @@
           <use xlink:href="#icon-user"></use>
         </svg><span class="hidden">Nombre</span></label>
         <input type="hidden" name="action" value="insertar">
-      <input id="login__username" type="text" name="nombre_u" class="form__input" placeholder="Username" required>
+      <input id="login__username" type="text" name="nombre_u" class="form__input" placeholder="Nombre" required>
     </div>
     
     <div class="form__field">
