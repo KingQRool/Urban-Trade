@@ -58,9 +58,10 @@ class User{
     }
     protected function ActualizarUsuarioBd(){
         $conexion = new Conexion();
-        $sql = "UPDATE tbl_usuarios_registrado SET nombre_u='$this->nombre_u',centro_u='$this->centro_u',contrasena_u='$this->contrasena_u',centro_u='$this->centro_u' WHERE id_u='$this->id_u'";
+        $sql = "UPDATE tbl_usuarios_registrado SET correo_u='$this->correo_u',nombre_u='$this->nombre_u',contrasena_u='$this->contrasena_u',centro_u='$this->centro_u' WHERE id_u='$this->id_u'";
         $actualizar = $conexion->stm->prepare($sql);
         $_SESSION['nombre_u'] = $this->nombre_u;
+        $_SESSION['correo_u'] = $this->correo_u;
         $actualizar->execute();
     }
 

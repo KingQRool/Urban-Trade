@@ -59,6 +59,7 @@ class UserController extends User
             $_SESSION['id_u'] = $usuario->id_u;
             $_SESSION['nombre_u'] = $usuario->nombre_u;
             $_SESSION['correo_u'] = $usuario->correo_u;
+            $_SESSION['centro_u'] = $usuario->centro_u;
             $this->CargoVistaInicio();
         }else{
             echo 'contraseña incorrecta';
@@ -88,7 +89,8 @@ class UserController extends User
         $this->id_u = $id_u;
         $this->nombre_u = $nombre_u;
         $this->correo_u = $correo_u;
-        $this->contrasena_u = $contrasena_u;
+        $password = password_hash($_POST['contrasena_u'], PASSWORD_BCRYPT);
+        $this->contrasena_u = $password;
         $this->centro_u = $centro_u;
         $this->ActualizarUsuarioBd();
         $this->CargoVistaPerfil();
