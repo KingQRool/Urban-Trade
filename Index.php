@@ -25,7 +25,7 @@
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=register">Registro</a></li>
                         <li class="nav-item"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=login">Inicio de sesion</a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=publication">Publicaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=publication">Publicaciones</a></li>
                         <li class="nav-item"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=store">Tiendas U.T</a></li>
                     </ul>
                 </div>

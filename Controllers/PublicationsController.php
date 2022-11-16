@@ -9,25 +9,30 @@ require_once '../Models/Publications.php';
 
 class PublicationsController extends Publication{
 
-// public function ViewInsert(){
+public function ViewInsert(){
 
-//     require '../Views/Equipo/Insert.php';
-// }
+    require '../Views/Publicaciones/Insert.php';
+}
 public function ViewList(){
     
-    $objetoretornadoequipo = $this->BuscarPublicaciones();
-    require '../Views/Equipo/View.php';
+    $objetoretornadopublication = $this->BuscarPublicaciones();
+    require '../Views/Publicaciones/Viewlist.php';
+}
+public function ViewListUser(){
+    
+    $objetoretornadopublication = $this->BuscarPublicaciones();
+    require '../Views/Usuario/Publicaciones.php';
 }
 
-
-public function GuardarInfoEquipo($nombre_p,$info_p,$fotos_p,$fotos_p_url,$precios)
+public function GuardarInfoPublicacion($nombre_p,$info_p,$fotos_p,$fotos_p_url,$precios_p)
 {
-    $this->nombre_P = $nombre_P;
+    $this->nombre_p = $nombre_p;
     $this->info_p = $info_p;
-    $this-> = $fotos;
+    $this->fotos_p = $fotos_p;
     $this->fotos_p_url = $fotos_p_url;
+    $this->precios_p = $precios_p;
     $this->InsertarPublicacion();
-    $this->RedirigirLogin();
+    $this->RedirigirViews();
 }
 // public function EliminarInfoPublicacion($ide){
 //     $this->ide = $ide;
@@ -59,31 +64,42 @@ public function GuardarInfoEquipo($nombre_p,$info_p,$fotos_p,$fotos_p_url,$preci
 // //     echo $imagen_url;
 // }
 
-public function RedirigirLogin(){
+public function RedirigirViews(){
 
-    header("location: PublicacionesController.php?action=view");
+    header("location: PublicationsController.php?action=publicationuser");
 }
 
 }
 
 
 if(isset($_GET['action']) && $_GET['action']=='insert'){
-$instanciaequipos = new PublicationsController();
-$instanciaequipos->ViewInsert();
+$instanciapublications = new PublicationsController();
+$instanciapublications->ViewInsert();
+}
+
+if(isset($_GET['action']) && $_GET['action']=='publication'){
+$instanciapublications = new PublicationsController();
+$instanciapublications->ViewList();
+}
+
+if(isset($_GET['action']) && $_GET['action']=='publicationuser'){
+$instanciapublications = new PublicationsController();
+$instanciapublications->ViewListUser();
 }
 if(isset($_POST['action']) && $_POST['action']=='insert'){
-$instanciaequipos = new PublicationsController();
-$imagen = $_FILES['imagen']['name'];
+$instanciapublications = new PublicationsController();
+$fotos_p = $_FILES['fotos_p']['name'];
 // echo $imagen;
-$copiaimagen = $_FILES['imagen']['tmp_name'];
-$imagen_url = "../Views/Equipo/Imagenes/" . $imagen;
-copy($copiaimagen,$imagen_url);
-$instanciaequipos->GuardarInfoEquipo($_POST['nombree'],$_POST['deportee'],$_POST['fechae'],$imagen,$imagen_url);
+$copiafotos_p = $_FILES['fotos_p']['tmp_name'];
+$fotos_p_url = "../Views/Publicaciones/Imagenes/" . $fotos_p;
+copy($copiafotos_p,$fotos_p_url);
+$instanciapublications->GuardarInfoPublicacion($_POST['nombre_p'],$_POST['info_p'],$fotos_p,$fotos_p_url,$_POST['precios_p']);
+
 }
-if(isset($_GET['action']) && $_GET['action']=='view'){
-$instanciaequipos = new PublicationsController();
-$instanciaequipos->ViewList();
-}
+// if(isset($_GET['action']) && $_GET['action']=='view'){
+// $instanciapublications = new PublicationsController();
+// $instanciapublications->ViewList();
+// }
 // if(isset($_GET['action']) && $_GET['action']=='eliminar'){
 // $instanciaequipos = new EquiposController();
 // $eliminarequipo = "../Views/Equipo/Imagenes/" . $_GET['imagen'];

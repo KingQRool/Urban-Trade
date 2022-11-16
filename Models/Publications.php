@@ -1,7 +1,7 @@
 <?php
 require_once '../Config/Conexion.php';
 
-class Equipo{
+class Publication{
     protected $id_p;
     protected $nombre_p;
     protected $info_p;
@@ -32,8 +32,8 @@ class Equipo{
         $sql = "SELECT * FROM tbl_publicaciones";
         $mostrar = $conexion->stm->prepare($sql);
         $mostrar->execute();
-        $objetoretornadopublicaion = $mostrar->fetchAll(PDO::FETCH_OBJ);
-        return $objetoretornadopublicaion;
+        $objetoretornadopublication = $mostrar->fetchAll(PDO::FETCH_OBJ);
+        return $objetoretornadopublication;
     }
 
 
@@ -53,8 +53,8 @@ class Equipo{
         $sql = "SELECT * FROM tbl_publicaciones WHERE id_p='$this->id_p'";
         $mostrar = $conexion->stm->prepare($sql);
         $mostrar->execute();
-        $objetoretornadopublicaion = $mostrar->fetchAll(PDO::FETCH_OBJ);
-        return $objetoretornadopublicaion;
+        $objetoretornadopublication = $mostrar->fetchAll(PDO::FETCH_OBJ);
+        return $objetoretornadopublication;
     }
 
         //Codigo Para Actualizar Datos↓

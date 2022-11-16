@@ -17,7 +17,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="../../Index.php">
-                    <img src="../../Public/Img/logourbantrade.png" style="height: 40px;" alt="*AQUI VA EL LOGO*" id="Logo">
+                    <img src="../Public/Img/logourbantrade.png" style="height: 40px;" alt="*AQUI VA EL LOGO*" id="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
@@ -26,10 +26,10 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="../../Index.php">Inicio</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../Usuario/register.php"> Registro</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../Usuario/login.php">Inicio de sesion</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../Usuario/Publicaciones.php">Publicaciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="../Usuario/Tiendas.php">Tiendas U.T</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=register"> Registro</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=login">Inicio de sesion</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=publication">Publicaciones</a></li>
+                        <li class="nav-item"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=store">Tiendas U.T</a></li>
                     </ul>
                 </div>
             </div>

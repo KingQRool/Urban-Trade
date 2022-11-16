@@ -7,25 +7,28 @@
     <link rel="stylesheet" href="../Public/Css/perfilusuario.css">
 </head>
 <body>
-    <div class="ui vertical menu">
+<div>
+   <div class="ui vertical menu">
             <div class="item">
-                <img src="../Public/Img/logourbantrade_black.png  " alt="Logo Sena">
+                <img src="../Public/Img/logourbantrade_black.png  " alt="Logo UrbanTrade">
             </div>
             <div class="item">
-                <a href="http://localhost/Urban-Trade/Controllers/UsersController.php?action=inicio">Inicio</a>
+                <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=inicio">Inicio</a>
             </div>
             <div class="item">
-            <a href="http://localhost/Urban-Trade/Controllers/UsersController.php?action=cerrar">Cerrar Sesion</a>
+            <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=cerrar">Cerrar Sesion</a>
         </div>
     </div>
     
     <div class="ui centered card">
       <div class="image">
-        <img src="../Public/Img/usuario.png">
+        <img src="../Public/Img/logosena.png">
       </div>
-      
       <div class="content">
-        <a class="header"><?php echo $_SESSION['nombre_u'];?></a>
+      <p class="ui centered header"><?php echo $_SESSION['nombre_u'];?></p>
+      </div>
+      <div class="content">
+        <p class="ui centered header"><?php echo $_SESSION['correo_u'];?></p>
       </div>
       
     <div>
@@ -37,14 +40,17 @@
     </div>
     
     </div>
-    
+    <div class="ui centered">
+        <h2>PUBLICACIONES</h2>
+    </div>
+</div>
     
     <script src="../Public/Js/sweetalert.min.js"></script>
         <script>
             function borrar(id_u){
                 swal({
             title: "¿esta seguro que desea eliminar?",
-            text: "si borra el registro no se podra recuperar",
+            text: "si borra esta cuenta no se podra recuperar",
             icon: "warning",
             buttons: true,
             dangerMode: true,
