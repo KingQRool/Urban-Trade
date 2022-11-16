@@ -10,6 +10,8 @@ class Equipo{
     protected $precios_p;
 
 
+        // INSERTAR PUBLICACION A BD //
+
     protected function InsertarPublicacion(){
         $conexion = new Conexion();
         $sql = "INSERT INTO tbl_publicaciones(nombre_p,info_p,fotos_p,fotos_p_url,precios_p) VALUES (?,?,?,?,?)";
@@ -22,29 +24,42 @@ class Equipo{
         $insertar->execute();
     }
 
-//     protected function BuscarEquipos(){
-//         $conexion = new Conexion();
-//         $sql = "SELECT * FROM tbl_equipo";
-//         $mostrar = $conexion->stm->prepare($sql);
-//         $mostrar->execute();
-//         $objetoretornadoequipo = $mostrar->fetchAll(PDO::FETCH_OBJ);
-//         return $objetoretornadoequipo;
-//     }
+    
+        //Codigo Mostrar Todas Las Publicaciones↓
+
+    protected function BuscarPublicaciones(){
+        $conexion = new Conexion();
+        $sql = "SELECT * FROM tbl_publicaciones";
+        $mostrar = $conexion->stm->prepare($sql);
+        $mostrar->execute();
+        $objetoretornadopublicaion = $mostrar->fetchAll(PDO::FETCH_OBJ);
+        return $objetoretornadopublicaion;
+    }
+
+
+        //Codigo Para Eliminar Publicaciones↓
+
 //     protected function EliminarEquipo(){
 //         $conexion = new Conexion();
 //         $sql = "DELETE FROM tbl_equipo WHERE ide='$this->ide'";
 //         $eliminar = $conexion->stm->prepare($sql);
 //         $eliminar->execute();
 //     }
-//     protected function MostrarEquipo(){
-//         $conexion = new Conexion();
-//         $sql = "SELECT * FROM tbl_equipo WHERE ide='$this->ide'";
-//         $mostrar = $conexion->stm->prepare($sql);
-//         $mostrar->execute();
-//         $objetoretornadoequipo = $mostrar->fetchAll(PDO::FETCH_OBJ);
-//         return $objetoretornadoequipo;
-//     }
-//     protected function ActualizarEquipo(){
+
+        //Codigo Mostrar Datos Formulario Actualizar↓
+
+    protected function MostrarPublicacion(){
+        $conexion = new Conexion();
+        $sql = "SELECT * FROM tbl_publicaciones WHERE id_p='$this->id_p'";
+        $mostrar = $conexion->stm->prepare($sql);
+        $mostrar->execute();
+        $objetoretornadopublicaion = $mostrar->fetchAll(PDO::FETCH_OBJ);
+        return $objetoretornadopublicaion;
+    }
+
+        //Codigo Para Actualizar Datos↓
+
+//     protected function ActualizarPublicacion(){
 //         $conexion = new Conexion();
 //         $sql = "UPDATE tbl_equipo SET nombree='$this->nombree',deportee='$this->deportee',fecha_creacion='$this->fechae',imagen='$this->imagen',imagen_url='$this->imagen_url' WHERE ide='$this->ide'";
 //         $actualizar = $conexion->stm->prepare($sql);
