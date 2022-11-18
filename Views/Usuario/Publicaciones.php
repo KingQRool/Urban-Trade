@@ -28,7 +28,7 @@
             <div class="extra content">
                 <span>
                     <i class="edit icon"></i>
-                    <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=eliminar&id_p=<?php echo $publication->id_p; ?>"> <button>Actualizar</button> </a>
+                    <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=actualizar&id_p=<?php echo $publication->id_p; ?>"> <button>Actualizar</button> </a>
                 </span>
                 <span class="right floated">
                     <i class="trash icon"></i>

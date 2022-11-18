@@ -6,7 +6,6 @@
     <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
 </head>
 <body>
-
 <div class="ui container">
     <div class="ui form">
         <h1>Insertar Publicacion</h1>
@@ -18,7 +17,7 @@
                     <input type="text" name="nombre_p" placeholder="Nombre su Publicacion">
                 </div>
                 <div class="field">
-                    <label for="">Informacíon De La Publicaion</label>
+                    <label for="">Informacíon De La Publicacion</label>
                     <input type="text" name="info_p" placeholder="Agrege Informacion Adicional">
                 </div>
                 <!-- <div class="field">
@@ -27,7 +26,7 @@
                 </div> -->
                 <div class="field">
                     <label for="">Precios de la Publicacion</label>
-                    <input type="double" name="precios_p" placeholder="Precios">
+                    <input type="number" name="precios_p" placeholder="Precios">
                 </div>
                 <div class="field">
                     <label for="">Ingrese Una Imagen De La Publicacion</label>
@@ -55,5 +54,4 @@
         </form>
     </div>
 </div>
-  
 </body>

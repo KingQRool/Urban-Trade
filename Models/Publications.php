@@ -59,12 +59,12 @@ class Publication{
 
         //Codigo Para Actualizar Datos↓
 
-//     protected function ActualizarPublicacion(){
-//         $conexion = new Conexion();
-//         $sql = "UPDATE tbl_Publicaciones SET nombree='$this->nombree',deportee='$this->deportee',fecha_creacion='$this->fechae',imagen='$this->imagen',imagen_url='$this->imagen_url' WHERE ide='$this->ide'";
-//         $actualizar = $conexion->stm->prepare($sql);
-//         $actualizar->execute();
-//     }
+    protected function ActualizarPublicacion(){
+        $conexion = new Conexion();
+        $sql = "UPDATE tbl_publicaciones SET nombre_p='$this->nombre_p',fotos_p='$this->fotos_p',foto_p_url='$this->fotos_p_url',precios_p='$this->precios_p' WHERE id_p='$this->id_p'";
+        $actualizar = $conexion->stm->prepare($sql);
+        $actualizar->execute();
+    }
     
  }
 
