@@ -17,7 +17,7 @@ foreach($objetoretornadousuario as $usuario){
 <body>
 <body class="align">
 <div class="Inicio">
-    <a href="http://localhost/Urban-Trade/Controllers/UsersController.php?action=Viewperfil">
+    <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=Viewperfil">
       <i class="fa-solid fa-house"></i>
       ATRAS
     </a>

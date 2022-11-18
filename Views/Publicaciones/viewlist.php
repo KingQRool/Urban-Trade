@@ -21,14 +21,7 @@ require_once '../Inc/Header.php';
                 </div>
             </div>
             <div class="extra content">
-                <span>
-                    <i class="edit icon"></i>
-                    <button onclick="actualizar(<?php echo $publication->id_p; ?>)">Actualizar</button>
-                </span>
-                <span class="right floated">
-                    <i class="trash icon"></i>
-                    <button onclick="borrar(<?php echo $publication->id_p; ?>,'<?php echo $publication->fotos_p ?>')">Eliminar</button>
-                </span>
+            
             </div>
 
         </div>

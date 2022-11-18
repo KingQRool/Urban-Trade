@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../Public/Css/perfilusuario.css">
 </head>
 <body>
+    
 <div>
    <div class="ui vertical menu">
             <div class="item">
@@ -16,13 +17,18 @@
                 <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=inicio">Inicio</a>
             </div>
             <div class="item">
+            <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=publicaciones">Mis Publicaciones</a>
+        </div>
+            <div class="item">
             <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=cerrar">Cerrar Sesion</a>
         </div>
+       
+
     </div>
     
     <div class="ui centered card">
       <div class="image">
-        <img src="../Public/Img/logosena.png">
+        <img src="../Public/Img/logo_sena.png">
       </div>
       <div class="content">
       <p class="ui centered header"><?php echo $_SESSION['nombre_u'];?></p>
@@ -32,16 +38,13 @@
       </div>
       
     <div>
-        <i class="fa-solid fa-trash"></i>
-        <button onclick="borrar(<?php echo $_SESSION['id_u'];?>)">Eliminar Perfil</button>
-        <span>_____</span>
-        <button onclick="actualizar(<?php echo $_SESSION['id_u'];?>)">Actualizar Datos</button>
-        <i class="fa-regular fa-pen-to-square"></i>
+        <!-- <i class="fa-solid fa-trash"></i> -->
+        <button class="ui inverted orange button" onclick="borrar(<?php echo $_SESSION['id_u'];?>)">Eliminar Perfil</button>
+        <!--<i class="fa-regular fa-pen-to-square"></i> -->
+        <button class="ui inverted green button" onclick="actualizar(<?php echo $_SESSION['id_u'];?>)">Actualizar Datos</button>
+        
     </div>
     
-    </div>
-    <div class="ui centered">
-        <h2>PUBLICACIONES</h2>
     </div>
 </div>
     

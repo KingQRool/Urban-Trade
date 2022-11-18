@@ -1,3 +1,10 @@
-body {
-    background-color: #2c3338;
+body{
+    background: rgb(99,205,4);
+    background: linear-gradient(0deg, rgba(99,205,4,1) 10%, rgba(5,134,33,1) 53%);
+    
 }
+
+.Public,.item{
+    text-align: center;
+}
+
