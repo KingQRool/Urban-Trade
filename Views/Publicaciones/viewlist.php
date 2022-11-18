@@ -1,9 +1,13 @@
-<?php
-
-require_once '../Inc/Header.php';
-
-?>
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../Public/Css/semantic.css">
+</head>
+<body>
 <div class="ui container">
     <h1> Listado Publicaciones</h1>
     <?php foreach ($objetoretornadopublication as $publication) { ?>
@@ -34,9 +38,5 @@ require_once '../Inc/Header.php';
         </div>
         <br>
     <?php } ?>
-
-<?php
-
-require_once '../Inc/Footer.php';
-
-?>
+</body>
+</html>

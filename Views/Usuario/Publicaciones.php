@@ -1,5 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../Public/Css/semantic.css">
+</head>
+<body>
 
-<script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
 <div class="Inicio">
   <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=insert">
     <i class="fa-solid fa-house"></i>
@@ -40,4 +50,7 @@
         </div>
         <br>
     <?php } ?>
+</body>
+</html>
+
 

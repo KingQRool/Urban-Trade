@@ -43,26 +43,26 @@ public function EliminarinfoPublicaciones($id_p){
 public function ActualizarInfoPublicacion($id_p){
     $this->id_p = $id_p;
     // echo $this->id_p;
-    $objetoretornadopublicacion = $this->ActualizarPublicacion();
+    $objetoretornadopublication = $this->MostrarPublicacion();
     require '../Views/Publicaciones/Update.php';
 }
-// public function GuardarInfoAtcualizarPublicacion($ide,$nombree,$deportee,$fechae,$imagen,$imagen_url){
-//     $this->ide = $ide;
-//     $this->nombree = $nombree;
-//     $this->deportee = $deportee;
-//     // $this->contrasenae = $contrasenae;
-//     $this->fecha_creacion = $fechae;
-//     $this->imagen = $imagen;
-//     $this->imagen_url = $imagen_url;
-//     $this->ActualizarEquipo();
-//     $this->RedirigirLogin();
-// // echo $ide;
-// //     echo $nombree;
-// //     echo $deportee;
-// //     echo $contrasenae;
-// //     echo $imagen;
-// //     echo $imagen_url;
-// }
+public function GuardarInfoAtcualizarPublicacion($id_p,$nombre_p,$info_p,$fotos_p,$fotos_p_url,$precios_p){
+    $this->id_p= $id_p;
+    $this->nombre_p = $nombre_p;
+    $this->info_p = $info_p;
+    // $this->contrasenae = $contrasenae;
+    $this->fotos_p = $fotos_p;    
+    $this->fotos_p_url = $fotos_p_url;
+    $this->precios_p = $precios_p;
+    $this->ActualizarPublicacion();
+    $this->ViewListUser();
+// echo $id_p;
+//     echo $nombree;
+//     echo $deportee;
+//     echo $contrasenae;
+//     echo $imagen;
+//     echo $imagen_url;
+}
 
 public function RedirigirViews(){
 
@@ -103,42 +103,43 @@ if (isset($_GET['action']) && $_GET['action'] == 'eliminar') {
     $instanciapublications->ViewListUser();
 }
 if(isset($_GET['action']) && $_GET['action']=='actualizar'){
-    $instanciaequipos = new PublicationsController();
-    $instanciaequipos->ActualizarInfoPublicacion($_GET['id_p']);
+    $instanciapublications = new PublicationsController();
+    $instanciapublications->ActualizarInfoPublicacion($_GET['id_p']);
     }
+
+if(isset($_POST['action']) && $_POST['action']=='actualizar'){
+$instanciapublications = new PublicationsController();
+$fotooriginal = $_POST['fotooriginal'];
+$original_url = $_POST['original_url'];
+$fotos_p = $_FILES['fotos_p']['name'];
+// echo $imagen;
+$copiafoto = $_FILES['fotos_p']['tmp_name'];
+$fotos_p_url = "../Views/Publicaciones/Imagenes/" . $fotos_p;
+
+if(empty($copiafoto)){
+    echo "hola";
+    $fotos_p = $fotooriginal;
+    $fotos_p_url = $original_url;
+}
+else
+{
+    echo "adios";
+    unlink($original_url);
+    copy($copiafoto,$fotos_p_url);
+}
+$instanciapublications->GuardarInfoAtcualizarPublicacion($_POST['id_p'],$_POST['nombre_p'],$_POST['info_p'],$fotos_p,$fotos_p_url,$_POST['precios_p']);
+}
 // if(isset($_GET['action']) && $_GET['action']=='view'){
 // $instanciapublications = new PublicationsController();
 // $instanciapublications->ViewList();
 // }
 
 
-
-// if(isset($_POST['action']) && $_POST['action']=='actualizar'){
-// $instanciaequipos = new EquiposController();
-// $imagenoriginal = $_POST['imagenoriginal'];
-// $original_url = $_POST['original_url'];
-// $imagen = $_FILES['imagen']['name'];
-// // echo $imagen;
-// $copiaimagen = $_FILES['imagen']['tmp_name'];
-// $imagen_url = "../Views/Equipo/Imagenes/" . $imagen;
-// if(empty($copiaimagen)){
-//     $imagen = $imagenoriginal;
-//     $imagen_url = $original_url;
-// }
-// else
-// {
-//     unlink($original_url);
-//     copy($copiaimagen,$imagen_url);
-// }
-// $instanciaequipos->GuardarInfoAtcualizarEquipo($_POST['ide'],$_POST['nombree'],$_POST['deportee'],$_POST['fechae'],$imagen,$imagen_url);
-// }
-
-
 // if(isset($_GET['action']) && $_GET['action']=='eliminar'){
 //     $instanciapublications = new PublicationsController();
-//     $eliminar = "../Views/Publicaciones/Imagenes/" . $_GET['fotos_'];
+//     $eliminar = "../Views/Publicaciones/Imagenes/" . $_GET['fotos_p'];
 //     // unlink($eliminar);
-//     $instanciapublications->EliminarInfoPublicacion($_GET['id_p']);
+//     $instanciapublications->EliminarinfoPublicaciones($_GET['id_p']);
 //     } 
 
-// ?>
+?>
