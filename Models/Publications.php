@@ -39,12 +39,12 @@ class Publication{
 
         //Codigo Para Eliminar Publicaciones↓
 
-//     protected function EliminarEquipo(){
-//         $conexion = new Conexion();
-//         $sql = "DELETE FROM tbl_equipo WHERE ide='$this->ide'";
-//         $eliminar = $conexion->stm->prepare($sql);
-//         $eliminar->execute();
-//     }
+    protected function EliminarPublicaciones(){
+        $conexion = new Conexion();
+        $sql = "DELETE FROM tbl_publicaciones WHERE id_p='$this->id_p'";
+        $eliminar = $conexion->stm->prepare($sql);
+        $eliminar->execute();
+    }
 
         //Codigo Mostrar Datos Formulario Actualizar↓
 
@@ -61,7 +61,7 @@ class Publication{
 
 //     protected function ActualizarPublicacion(){
 //         $conexion = new Conexion();
-//         $sql = "UPDATE tbl_equipo SET nombree='$this->nombree',deportee='$this->deportee',fecha_creacion='$this->fechae',imagen='$this->imagen',imagen_url='$this->imagen_url' WHERE ide='$this->ide'";
+//         $sql = "UPDATE tbl_Publicaciones SET nombree='$this->nombree',deportee='$this->deportee',fecha_creacion='$this->fechae',imagen='$this->imagen',imagen_url='$this->imagen_url' WHERE ide='$this->ide'";
 //         $actualizar = $conexion->stm->prepare($sql);
 //         $actualizar->execute();
 //     }
