@@ -20,17 +20,20 @@
                     <span class=""><?php echo $publication->precios_p; ?></span>
                 </div>
                 <div class="description">
+                
                     <?php echo $publication->info_p; ?>
+                 
                 </div>
             </div>
             <div class="extra content">
                 <span>
                     <i class="edit icon"></i>
-                    <button onclick="actualizar(<?php echo $publication->id_p; ?>)">Actualizar</button>
+                    <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=eliminar&id_p=<?php echo $publication->id_p; ?>"> <button>Actualizar</button> </a>
                 </span>
                 <span class="right floated">
                     <i class="trash icon"></i>
-                    <button onclick="borrar(<?php echo $publication->id_p; ?>,'<?php echo $publication->fotos_p ?>')">Eliminar</button>
+                    <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=eliminar&id_p=<?php echo $publication->id_p; ?>"> <button>Eliminar</button> </a>
+                    
                 </span>
             </div>
 

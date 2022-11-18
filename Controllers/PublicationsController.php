@@ -34,12 +34,12 @@ public function GuardarInfoPublicacion($nombre_p,$info_p,$fotos_p,$fotos_p_url,$
     $this->InsertarPublicacion();
     $this->RedirigirViews();
 }
-// public function EliminarInfoPublicacion($ide){
-//     $this->ide = $ide;
-//     // echo $this->ide;
-//     $this->EliminarEquipo();
-//     $this->RedirigirLogin();
-// }
+public function EliminarinfoPublicaciones($id_p){
+    $this->id_p = $id_p;
+    $this->EliminarPublicaciones();
+    // require '../Index.php';
+
+}
 // public function ActualizarInfoPublicacion($ide){
 //     $this->id_p = $id_p;
 //     // echo $this->ide;
@@ -96,16 +96,22 @@ copy($copiafotos_p,$fotos_p_url);
 $instanciapublications->GuardarInfoPublicacion($_POST['nombre_p'],$_POST['info_p'],$fotos_p,$fotos_p_url,$_POST['precios_p']);
 
 }
+// if(isset($_GET['action']) && $_GET['action']=='eliminar'){
+//     $instanciapublications = new PublicationsController();
+//     $eliminar = "../Views/Publicaciones/Imagenes/" . $_GET['fotos_'];
+//     // unlink($eliminar);
+//     $instanciapublications->EliminarInfoPublicacion($_GET['id_p']);
+//     }    
+if (isset($_GET['action']) && $_GET['action'] == 'eliminar') {
+    $instanciapublications = new PublicationsController();
+    $instanciapublications->EliminarinfoPublicaciones($_GET['id_p']);
+    $this->ViewInsert();
+}
 // if(isset($_GET['action']) && $_GET['action']=='view'){
 // $instanciapublications = new PublicationsController();
 // $instanciapublications->ViewList();
 // }
-// if(isset($_GET['action']) && $_GET['action']=='eliminar'){
-// $instanciaequipos = new EquiposController();
-// $eliminarequipo = "../Views/Equipo/Imagenes/" . $_GET['imagen'];
-// unlink($eliminarequipo);
-// $instanciaequipos->EliminarInfoEquipo($_GET['ide']);
-// }
+
 // if(isset($_GET['action']) && $_GET['action']=='actualizar'){
 // $instanciaequipos = new EquiposController();
 // $instanciaequipos->ActualizarInfoEquipo($_GET['ide']);
