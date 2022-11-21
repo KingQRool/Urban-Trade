@@ -55,6 +55,7 @@ public function GuardarInfoAtcualizarPublicacion($id_p,$nombre_p,$info_p,$fotos_
     $this->fotos_p_url = $fotos_p_url;
     $this->precios_p = $precios_p;
     $this->ActualizarPublicacion();
+    $_SESSION['rol'] = 'invitado';
     $this->ViewListUser();
 // echo $id_p;
 //     echo $nombree;
@@ -117,7 +118,6 @@ $copiafoto = $_FILES['fotos_p']['tmp_name'];
 $fotos_p_url = "../Views/Publicaciones/Imagenes/" . $fotos_p;
 
 if(empty($copiafoto)){
-    echo "hola";
     $fotos_p = $fotooriginal;
     $fotos_p_url = $original_url;
 }

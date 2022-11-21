@@ -17,7 +17,7 @@ foreach($objetoretornadousuario as $usuario){
 <body>
 <body class="align">
 <div class="Inicio">
-    <a href="http://localhost/Urban-Trade/Controllers/UsersController.php?action=Viewperfil">
+    <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=Viewperfil">
       <i class="fa-solid fa-house"></i>
       ATRAS
     </a>
@@ -51,7 +51,7 @@ foreach($objetoretornadousuario as $usuario){
       <label for="login__password"><svg class="icon">
           <use xlink:href="#icon-lock"></use>
         </svg><span class="hidden">Contraseña</span></label>
-      <input id="login__password" type="password" name="contrasena_u" class="form__input" placeholder="Nueva Contraseña">
+      <input id="login__password" type="password" name="contrasena_u" class="form__input" placeholder="Contraseña" required>
     </div>
 
     <div class="form__field">

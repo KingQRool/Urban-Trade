@@ -26,9 +26,9 @@
 
     </div>
     
-    <div class="ui centered card">
+    <div class="ui centered card top-20000">
       <div class="image">
-        <img src="../Public/Img/logo_sena.png">
+        <img src="../Public/Img/Perfil.jpg">
       </div>
       <div class="content">
       <p class="ui centered header"><?php echo $_SESSION['nombre_u'];?></p>

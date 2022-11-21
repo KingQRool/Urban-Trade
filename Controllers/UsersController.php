@@ -56,12 +56,15 @@ class UserController extends User
         $usuarioobjeto = $this->BuscarUsuario();
         foreach($usuarioobjeto as $usuario){};
         if(password_verify($contrasena_u,$usuario->contrasena_u)){
+            $_SESSION['rol'] = 'registrado';
             $_SESSION['id_u'] = $usuario->id_u;
             $_SESSION['nombre_u'] = $usuario->nombre_u;
             $_SESSION['correo_u'] = $usuario->correo_u;
             $this->CargoVistaInicio();
         }else{
-            echo 'contraseña incorrecta';
+            echo '<script language="javascript">alert("Contraseña incorrecta")</script>';
+            $this->CargoVistaLogin();
+            
         }
     }
 
@@ -80,7 +83,7 @@ class UserController extends User
     public function CerrarSesion()
     {
         session_destroy();
-        $this->CargoVistaRegistrarse();
+        include '../Index.php';
     }
 
      public function GuardarInfoAtcualizarUsuario($id_u,$nombre_u,$correo_u,$contrasena_u,$centro_u)
@@ -88,7 +91,8 @@ class UserController extends User
         $this->id_u = $id_u;
         $this->nombre_u = $nombre_u;
         $this->correo_u = $correo_u;
-        $this->contrasena_u = $contrasena_u;
+        $password = password_hash($_POST['contrasena_u'], PASSWORD_BCRYPT);
+        $this->contrasena_u = $password;
         $this->centro_u = $centro_u;
         $this->ActualizarUsuarioBd();
         $this->CargoVistaPerfil();
@@ -105,6 +109,7 @@ if (isset($_GET['action']) && $_GET['action'] == 'register') {
     $usercontroller = new UserController();
     $usercontroller->CargoVistaRegistrarse();
 }
+
 if (isset($_GET['action']) && $_GET['action'] == 'actualizar') {
     $usercontroller = new UserController();
     $usercontroller->ActualizarUsuario($_GET['id_u']);

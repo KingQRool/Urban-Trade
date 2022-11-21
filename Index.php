@@ -5,10 +5,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Urban Trade</title>
-        <link rel="icon" type="image/x-icon" href="Public/img/logo.ico" />
+        <link rel="icon" type="image/x-icon" href="../Public/Img/logo.ico"/>
+        
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Tema principal CSS -->
         <link href="Public\css\styles.css" rel="stylesheet"/>
+        <link href="../Public\css\styles.css" rel="stylesheet"/>
     </head>
     <body id="page-top">
         <!-- Navegacion -->
