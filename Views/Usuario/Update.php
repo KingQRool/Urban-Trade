@@ -51,7 +51,7 @@ foreach($objetoretornadousuario as $usuario){
       <label for="login__password"><svg class="icon">
           <use xlink:href="#icon-lock"></use>
         </svg><span class="hidden">Contraseña</span></label>
-      <input id="login__password" type="password" name="contrasena_u" class="form__input" placeholder="Contraseña" value="<?php echo $usuario->contrasena_u; ?>" required>
+      <input id="login__password" type="password" name="contrasena_u" class="form__input" placeholder="Nueva Contraseña">
     </div>
 
     <div class="form__field">
