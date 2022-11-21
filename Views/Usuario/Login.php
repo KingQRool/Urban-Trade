@@ -48,7 +48,7 @@
 
       </form>
 
-      <p class="text--center">No Tienes Cuenta? <a href="http://localhost/Proyecto%Git/Urban-Trade/Controllers/UsersController.php?action=register">Registrate</a> <svg class="icon">
+      <p class="text--center">No Tienes Cuenta? <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=register">Registrate</a> <svg class="icon">
           <use xlink:href="#icon-arrow-right"></use>
         </svg></p>
 
