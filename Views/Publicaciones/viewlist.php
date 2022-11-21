@@ -5,18 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../Public/Css/semantic.css">
 </head>
 <body>
-
-<div class="Inicio">
-  <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=insert">
-    <i class="fa-solid fa-house"></i>
-    AGREGAR PUBLICACION
-  </a>
-</div>
-
 <div class="ui container">
     <h1> Listado Publicaciones</h1>
     <?php foreach ($objetoretornadopublication as $publication) { ?>
@@ -25,25 +16,22 @@
                 <img src="<?php echo $publication->fotos_p_url; ?>">
             </div>
             <div class="content">
-                <a class="header"><?php echo $publication->nombre_p;?></a>
+                <a class="header"><?php echo $publication->precios_p;?></a>
                 <div class="meta">
-                    <span class=""><?php echo $publication->precios_p; ?></span>
+                    <span class=""><?php echo $publication->nombre_p;?></span>
                 </div>
                 <div class="description">
-                
                     <?php echo $publication->info_p; ?>
-                 
                 </div>
             </div>
             <div class="extra content">
                 <span>
                     <i class="edit icon"></i>
-                    <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=actualizar&id_p=<?php echo $publication->id_p; ?>"> <button>Actualizar</button> </a>
+                    <button onclick="actualizar(<?php echo $publication->id_p; ?>)">Actualizar</button>
                 </span>
                 <span class="right floated">
                     <i class="trash icon"></i>
-                    <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=eliminar&id_p=<?php echo $publication->id_p; ?>"> <button>Eliminar</button> </a>
-                    
+                    <button onclick="borrar(<?php echo $publication->id_p; ?>,'<?php echo $publication->fotos_p ?>')">Eliminar</button>
                 </span>
             </div>
 
@@ -52,5 +40,3 @@
     <?php } ?>
 </body>
 </html>
-
-
