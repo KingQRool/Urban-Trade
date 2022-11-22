@@ -28,7 +28,7 @@ if(empty($_SESSION['nombre_u'])){
             </div>
             <div class="item">
                 <a
-                    href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=publicaciones">Mis
+                    href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=mispublicaciones">Mis
                     Publicaciones</a>
             </div>
             <div class="item">

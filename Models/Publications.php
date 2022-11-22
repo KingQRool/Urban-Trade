@@ -8,19 +8,21 @@ class Publication{
     protected $fotos_p;
     protected $fotos_p_url;
     protected $precios_p;
+    protected $id_u;
 
 
         // INSERTAR PUBLICACION A BD //
 
     protected function InsertarPublicacion(){
         $conexion = new Conexion();
-        $sql = "INSERT INTO tbl_publicaciones(nombre_p,info_p,fotos_p,fotos_p_url,precios_p) VALUES (?,?,?,?,?)";
+        $sql = "INSERT INTO tbl_publicaciones(nombre_p,info_p,fotos_p,fotos_p_url,precios_p,id_u) VALUES (?,?,?,?,?,?)";
         $insertar = $conexion->stm->prepare($sql);
         $insertar->bindParam(1,$this->nombre_p);
         $insertar->bindParam(2,$this->info_p);
         $insertar->bindParam(3,$this->fotos_p);
         $insertar->bindParam(4,$this->fotos_p_url);
         $insertar->bindParam(5,$this->precios_p);
+        $insertar->bindParam(6,$this->id_u);
         $insertar->execute();
     }
 
@@ -64,6 +66,15 @@ class Publication{
         $sql = "UPDATE tbl_publicaciones SET nombre_p='$this->nombre_p',info_p='$this->info_p',fotos_p='$this->fotos_p',fotos_p_url='$this->fotos_p_url',precios_p='$this->precios_p' WHERE id_p='$this->id_p'";
         $actualizar = $conexion->stm->prepare($sql);
         $actualizar->execute();
+    }
+
+    protected function BuscarMisPublicaciones(){
+        $conexion = new Conexion();
+        $sql = "SELECT * FROM tbl_publicaciones WHERE id_u='$this->id_u'";
+        $mostrar = $conexion->stm->prepare($sql);
+        $mostrar->execute();
+        $objetoretornadopublication = $mostrar->fetchAll(PDO::FETCH_OBJ);
+        return $objetoretornadopublication;
     }
     
  }

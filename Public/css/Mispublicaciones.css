@@ -1,0 +1,183 @@
+
+.titulo{
+    margin-top: 5rem;
+      text-align: center;
+      padding: 0.75rem;
+      font-size: 8rem;
+      font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+      text-transform: uppercase;
+      font-weight: 700;
+  }
+  .product-grid {
+    margin: 0 -10px;
+  }
+  .product-grid li {
+    margin-bottom: 20px;
+  }
+  
+  .product-box {
+    border: 1px solid #89a193;
+    margin: 0 10px;
+    padding: 9px;
+    position: relative;
+  }
+  
+  .product-image {
+    -webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,0.2), 5px 5px 15px -5px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0 0 1px 1px rgba(0,0,0,0.2), 5px 5px 15px -5px rgba(0,0,0,0.2);
+    box-shadow: 0 0 1px 1px rgba(0,0,0,0.2), 5px 5px 15px -5px rgba(0,0,0,0.2);
+    margin-bottom: 10px;
+  }
+  .product-image a,
+  .product-image img {
+    display: block;
+  }
+  .product-image img {
+    height: auto;
+    width: 100%;
+  }
+  .product-details {
+    border-bottom: 36px solid #e8e6d6;
+    padding-bottom: 10px;
+  }
+  .product-icon-new {
+    background-color: #89a193;
+    color: #ffffff;
+    display: block;
+    font-weight: 700;
+    left: 0;
+    padding: 6px 10px;
+    position: absolute;
+    top: 0;
+  }
+  .product-name a {
+    color: #5bb318;
+    text-decoration: none;
+  }
+  .product-name a:hover {
+    color: #7dce13;
+    text-decoration: underline;
+  }
+  .product-price .price-old {
+    text-decoration: line-through;
+  }
+  .product-no-rating,
+  .product-rating,
+  .product-star-rating {
+    display: block;
+    height: 16px;
+    width: 80px;
+  }
+  .inicioderecho{
+    
+  }
+  .product-no-rating,
+  .product-rating {
+    bottom: 0;
+    left: 0;
+    margin: 19px;
+    position: absolute;
+  }
+  .product-no-rating,
+  .product-star-rating {
+    text-indent: -9999px;
+  }
+  
+  
+  .product-grid-basic .product-details {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+  .product-grid-basic .product-name {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .product-grid-basic .product-price,
+  .product-grid-basic .product-no-rating,
+  .product-grid-basic .product-rating {
+    display: none;
+  }
+  
+  @media (min-width: 480px) {
+    .product-grid li {
+      float: left;
+      width: 50%;
+    }
+  }
+  
+  @media (min-width: 720px) {
+    .product-grid li {
+      width: 50%;
+    }
+    .product-image {
+      float: left;
+      margin: 0 10px 0 0;
+      width: 150px;
+    }
+    .product-details {
+      min-height: 100px;
+    }
+    .product-grid-basic .product-image {
+      width: 120px;
+    }
+    .product-grid-basic .product-details {
+      min-height: 80px;
+    }
+  }
+  
+  .clear:after {
+    clear: both;
+    content: '';
+    display: table;
+  }
+  .mainWrapper {
+    min-width: 320px;
+  }
+  .wrapBox {
+    background-color: #f4f0e2;
+    font-family: 'Oxygen', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 18px;
+    padding: 20px;
+  }
+  .test {
+    background-color: #FFF;
+    box-shadow: 0 0 1px 0 #ede6d1;
+    border: 20px solid #FFF;
+    border-bottom: 0;
+  }
+  
+  
+  
+  button {
+    position:block;
+    margin-top:1%;
+    background: #7dce13  ;
+    border:2px solid #5bb318;
+    padding:10px;
+    font-size:10px;
+    box-shadow:4px 4px 0px 0px #424242;
+    font-family: 'Open Sans', sans-serif;
+    font-weight:700;
+    letter-spacing:5px;
+    text-transform:uppercase;
+    transition: all 300ms ease-in-out;
+    left: 210px;
+    top:-25px;
+  }
+  a{
+    color: #212529;
+    text-decoration: none;
+  }
+  a:hover{
+    color: #212529;
+    text-decoration: none;
+  }
+  
+  button:hover {
+    left:px;
+    top: -30px;
+    box-shadow:0 0 0 0 greenyellow;
+  }
+  
+  
