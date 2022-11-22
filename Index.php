@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Urban Trade</title>
         <link rel="icon" type="image/x-icon" href="../Public/Img/logo.ico"/>
+        <link rel="icon" type="image/x-icon" href="Public/Img/logo.ico"/>
         
         <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
         <!-- Tema principal CSS -->
@@ -16,7 +17,7 @@
         <!-- Navegacion -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="Index.php">
+                <a class="navbar-brand" href="../Index.php">
                     <img src="Public/img/logourbantrade.png" style="height: 40px;" alt="*AQUI VA EL LOGO*" id="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
@@ -95,8 +96,8 @@
         <section class="page-section" id="services">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Nuestros Servicios</h2>
-                    <p class="text-muted"> Algunos de nuestros servicios son; ver Publicaciones, crear publicaciones, facilitar el comercio web entre los emprededores del sena, ya sean los propios estudiantes o las tiendas distribuidas en la zona del sena, ademas de las tiendas aledañas</p>
+                    <h2 class="section-heading text-uppercase" style="color:#7dce13" >Nuestros Servicios</h2>
+                    <p class="text-muted"> Algunos de nuestros servicios son; ver Publicaciones, crear publicaciones, facilitar el comercio web entre los emprededores del SENA, ya sean los propios estudiantes o las tiendas distribuidas en la zona del sena, ademas de las tiendas aledañas</p>
                 </div>
                 <div class="row text-center">
                     <div class="col-md-4">
@@ -105,7 +106,7 @@
                             <i class="fas fa-shopping-cart fa-stack-1x fa-inverse"></i>
                         </span>
                         <h4 class="my-3">Visualización de productos</h4>
-                        <p class="text-muted">En Urban Trade se va a hacer la Visualización de productos dados por aquellas personas que deseén empredender, tiendas dentro de la zona del sena pedregal y tiendas al rededor de la universidad, todas estas cosas se podran ver con detalle, desde precio, cantidad, lugar donde se encuetra el producto, imagen del lugar, y mucho mas!</p>
+                        <p class="text-muted">En Urban Trade se va a hacer la Visualización de productos dados por aquellas personas que deseén empredender, tiendas dentro de la zona del SENA pedregal y tiendas alrededor, todo se podra publicar con detalle, desde precio, cantidad, lugar donde se encuetra el producto, imagen del lugar, y mucho mas!</p>
                     </div>
                     <div class="col-md-4">
                         <span class="fa-stack fa-4x">
@@ -186,7 +187,7 @@
                     </li>
                     <li class="timeline-inverted">
                         <div class="timeline-image">
-                            <h4>
+                            <h4 >
                                 ¡Ahora si
                                 <br />
                                 Listo para Usar
@@ -226,10 +227,10 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="Public/img/integrante2.jpeg" alt="..." />
-                            <h4>Edier Mauricio Giraldo</h4>
-                            <p class="text-muted">"Esperenado sobrevivir a la entrega de fase"</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/EYIYER"><i class="fab fa-github"></i></a>
+                            <img class="mx-auto rounded-circle" src="Public/img/integrante4.jpeg" alt="..." />
+                            <h4>Diego </h4>
+                            <p class="text-muted">""</p>
+                            <a class="btn btn-dark btn-social mx-2" href=""><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -269,7 +270,7 @@
         <section class="page-section" id="contact">
             <div class="container">
                 <div class="text-center">
-                    <h2 class="section-heading text-uppercase">Contactanos</h2>
+                    <h2 class="section-heading text-uppercase" >Contactanos</h2>
                     <h3 class="section-subheading text-muted">Utiliza este espacio para escribirnos un mensaje personal como una critica, sugerencia o agradecimientos, Esto lo hacemos para interactuar mas con nuestros usuarios y mejorar tu experiencia.</h3>
                 </div>
                 <form id="contactForm" data-sb-form-api-token="API_TOKEN">
@@ -327,11 +328,13 @@
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
-                <div class="row align-items-center">
-                    <div class="col-lg-4 text-lg-start">Copyright &copy; Urban Trade 2022</div>
-                    <div class="col-lg-4 my-3 my-lg-0">
-                        
-                    </div>
+            <div id="copyright" align="center">&copy; 2022 - 2022 WWW.Urban-Trade.com</div>
+<script>
+(function(){
+	let cpr = document.getElementById("copyright");
+	cpr.innerHTML = "&copy; 2022 - "+new Date().getFullYear()+" WWW.Urban-Trade.com - All Rights Reserved.";
+})();
+</script>
                     <div class="col-lg-4 text-lg-end">
                         <a class="link-dark text-decoration-none me-3" href="ListadoPersonas.php">Politicas De Privacidad</a>
                         <a class="link-dark text-decoration-none" href="">Terminos De Uso</a>
@@ -343,6 +346,7 @@
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
         <script src="Public\js\scripts.js"></script>
+        <script src="../Public\js\scripts.js"></script>
     
         <!-- * * SB Forms JS    * *-->
         

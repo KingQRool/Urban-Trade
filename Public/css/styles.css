@@ -7776,7 +7776,7 @@ textarea.form-control-lg {
 
 .text-muted {
   --bs-text-opacity: 1;
-  color: #121316; 
+  color: #000000; 
 }
 
 .text-black-50 {
@@ -11308,7 +11308,7 @@ p {
   padding: 3rem 0;
   
 }
-.page-section h2.section-heading, .page-section .section-heading.h2 {
+.page-section h2.section-heading, .page-section .section-heading.h2{
   font-size: 2.5rem;
   margin-top: 0;
   margin-bottom: 1rem;
@@ -11318,8 +11318,8 @@ p {
 
 .page-section h3.section-subheading, .page-section .section-subheading.h3 {
   color: white;
-  font-size: 1rem;
-  font-weight: 400;
+  font-size: 2rem;
+  font-weight: 500;
   font-style: italic; 
   font-family: "Roboto Slab", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   margin-bottom: 4rem; 

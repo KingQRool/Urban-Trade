@@ -1,6 +1,9 @@
 <?php
 
 require_once '../Models/Publications.php';
+require 'SesionsController.php';
+$isc = new SesionController();
+
 //require_once 'SesionsController.php';
 // if(empty($_SESSION['nombreu'])){
 // $sesioncontroller = new  SesionController();

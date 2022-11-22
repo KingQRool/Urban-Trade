@@ -14,7 +14,7 @@
     <title>Document</title>
 </head>
 <body>
-<?php if(isset($_SESSION['rol']) && $_SESSION['rol']=='registrado') { ?>
+
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
                 <a class="navbar-brand" href="../../Index.php">
@@ -32,26 +32,5 @@
                 </div>
             </div>
         </nav>
-<?php } ?>
-
-
-<?php if(isset($_SESSION['rol']) && $_SESSION['rol']=='invitado') { ?>
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="../../Index.php">
-                    <img src="../Public/Img/logourbantrade.png" style="height: 40px;" alt="*AQUI VA EL LOGO*" id="Logo">
-                </a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
-                    <i class="fas fa-bars ms-1"></i>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="../Index.php">Inicio</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-<?php } ?>
 </body>
 </html>

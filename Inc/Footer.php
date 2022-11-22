@@ -9,7 +9,7 @@ var navbarShrink = function () {
     if (!navbarCollapsible) {
         return;
     }
-    if (window.scrollY === -1110) {
+    if (window.scrollY === -10000) {
         navbarCollapsible.classList.remove('navbar-shrink')
     } else {
         navbarCollapsible.classList.add('navbar-shrink')

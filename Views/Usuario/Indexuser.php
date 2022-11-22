@@ -1,3 +1,11 @@
+<?php 
+
+if(empty($_SESSION['nombre_u'])){
+    //echo 'logueese';
+    $isc = new SesionController();
+    $isc->RedireccionarUsuarios();
+}
+?>
 <!DOCTYPE html>
 <html lang="es">
     <head>
@@ -24,7 +32,7 @@
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
                         <li class="nav-item"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=publicationuser">Publicaciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="Views/Usuario/Tiendas.php">Tiendas U.T</a></li>
+                        
                         <li class="nav-item" id="icono_usuario"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=Viewperfil"><svg width="32" height="32" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
                         <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
                         <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
@@ -40,7 +48,7 @@
             <div class="container">
                 <div class="masthead-subheading">¡Bienvenido A!</div>
                 <div class="masthead-heading text-uppercase">Urban Trade</div>
-               <div class="masthead-subheading"> <p><?php echo $_SESSION['nombre_u'];?></p></div>
+                <div class="masthead-subheading"> <p style="color:#7dce13"><?php echo $_SESSION['nombre_u'];?></p></div>
             </div>
         </header>
         <!-- CARROUSEL   Cambiar color de fondo style="background color" -->
@@ -226,10 +234,10 @@
                     </div>
                     <div class="col-lg-3">
                         <div class="team-member">
-                            <img class="mx-auto rounded-circle" src="../Public/img/integrante2.jpeg" alt="..." />
-                            <h4>Edier Mauricio Giraldo</h4>
-                            <p class="text-muted">"Esperenado sobrevivir a la entrega de fase"</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/EYIYER"><i class="fab fa-github"></i></a>
+                            <img class="mx-auto rounded-circle" src="../Public/img/integrante4.jpeg" alt="..." />
+                            <h4>Diego </h4>
+                            <p class="text-muted">""</p>
+                            <a class="btn btn-dark btn-social mx-2" href=""><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -333,7 +341,7 @@
                         
                     </div>
                     <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="ListadoPersonas.php">Politicas De Privacidad</a>
+                        <a class="link-dark text-decoration-none me-3" href="">Politicas De Privacidad</a>
                         <a class="link-dark text-decoration-none" href="#!">Terminos De Uso</a>
                     </div>
                 </div>

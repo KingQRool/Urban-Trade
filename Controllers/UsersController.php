@@ -2,8 +2,8 @@
 
 include_once '../Models/Users.php';
 require 'SesionsController.php';
+$ics = new SesionController();
 
-$sesioncontroller = new  SesionController();
 
 class UserController extends User
 {
@@ -56,7 +56,6 @@ class UserController extends User
         $usuarioobjeto = $this->BuscarUsuario();
         foreach($usuarioobjeto as $usuario){};
         if(password_verify($contrasena_u,$usuario->contrasena_u)){
-            $_SESSION['rol'] = 'registrado';
             $_SESSION['id_u'] = $usuario->id_u;
             $_SESSION['nombre_u'] = $usuario->nombre_u;
             $_SESSION['correo_u'] = $usuario->correo_u;
@@ -83,7 +82,7 @@ class UserController extends User
     public function CerrarSesion()
     {
         session_destroy();
-        include '../Index.php';
+        $this->CargoVistaLogin();
     }
 
      public function GuardarInfoAtcualizarUsuario($id_u,$nombre_u,$correo_u,$contrasena_u,$centro_u)
