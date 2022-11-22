@@ -10,3 +10,7 @@ body{
 #peril{
     margin-bottom: -100000000px;
 }
+#nombre_usaurio{
+    text-transform: capitalize;
+ 
+}

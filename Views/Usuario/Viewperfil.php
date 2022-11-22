@@ -43,7 +43,7 @@ if(empty($_SESSION['nombre_u'])){
                 <img src="../Public/Img/Perfil.jpg">
             </div>
             <div class="content">
-                <p class="ui centered header"><?php echo $_SESSION['nombre_u'];?></p>
+                <p id="nombre_usaurio" class="ui centered header"><?php echo $_SESSION['nombre_u'];?></p>
             </div>
             <div class="content">
                 <p class="ui centered header"><?php echo $_SESSION['correo_u'];?></p>

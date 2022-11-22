@@ -48,7 +48,7 @@ if(empty($_SESSION['nombre_u'])){
             <div class="container">
                 <div class="masthead-subheading">¡Bienvenido A!</div>
                 <div class="masthead-heading text-uppercase">Urban Trade</div>
-                <div class="masthead-subheading"> <p style="color:#7dce13"><?php echo $_SESSION['nombre_u'];?></p></div>
+                <div class="masthead-subheading"> <p id="nombre_usaurio" style="color:#7dce13"><?php echo $_SESSION['nombre_u'];?></p></div>
             </div>
         </header>
         <!-- CARROUSEL   Cambiar color de fondo style="background color" -->
@@ -221,7 +221,7 @@ if(empty($_SESSION['nombre_u'])){
                             <h4>Juan Esteban Rendon </h4>
                             <p class="text-muted">"Me perdí en el segundo trimestre"</p>
                             <p class="text-muted"></p>
-                            <a class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-github"></i></a>
+                            <a target="_blank" class="btn btn-dark btn-social mx-2" href="#!" aria-label="Parveen Anand Twitter Profile"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -229,15 +229,15 @@ if(empty($_SESSION['nombre_u'])){
                             <img class="mx-auto rounded-circle" src="../Public/img/integrante2.jpeg" alt="..." />
                             <h4>Edier Mauricio Giraldo</h4>
                             <p class="text-muted">"Esperenado sobrevivir a la entrega de fase"</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/EYIYER"><i class="fab fa-github"></i></a>
+                            <a target="_blank" class="btn btn-dark btn-social mx-2" href="https://github.com/EYIYER"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3">
                         <div class="team-member">
                             <img class="mx-auto rounded-circle" src="../Public/img/integrante4.jpeg" alt="..." />
                             <h4>Diego </h4>
-                            <p class="text-muted">""</p>
-                            <a class="btn btn-dark btn-social mx-2" href=""><i class="fab fa-github"></i></a>
+                            <p class="text-muted">"Me encontre en el tercer trimestre."</p>
+                            <a target="_blank" class="btn btn-dark btn-social mx-2" href="https://github.com/SpiritDark1164" ><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                     <div class="col-lg-3">
@@ -245,7 +245,7 @@ if(empty($_SESSION['nombre_u'])){
                             <img class="mx-auto rounded-circle" src="../Public/img/integrante3.jpeg" alt="Miguel Angel Vasquez" />
                             <h4>Miguel Angel Vasquez</h4>
                             <p class="text-muted">"Almost Programmer"</p>
-                            <a class="btn btn-dark btn-social mx-2" href="https://github.com/MykeVasquez09" aria-label="Larry Parker Twitter Profile"><i class="fab fa-github"></i></a>
+                            <a target="_blank" class="btn btn-dark btn-social mx-2" href="https://github.com/MykeVasquez09" aria-label="Larry Parker Twitter Profile"><i class="fab fa-github"></i></a>
                         </div>
                     </div>
                 </div>
@@ -262,10 +262,10 @@ if(empty($_SESSION['nombre_u'])){
                      
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="..." aria-label="Microsoft Logo" /></a>
+                        <a target="_blank" href="#!"><img class="img-fluid img-brand d-block mx-auto" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="..." aria-label="Microsoft Logo" /></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <A href="https://www.sena.edu.co/es-co/Paginas/default.aspx"><img class="img-fluid img-brand d-block mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Sena_Colombia_logo.svg/1200px-Sena_Colombia_logo.svg.png"  alt="..." aria-label="IBM Logo" /></A>
+                        <A target="_blank" href="https://www.sena.edu.co/es-co/Paginas/default.aspx"><img class="img-fluid img-brand d-block mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Sena_Colombia_logo.svg/1200px-Sena_Colombia_logo.svg.png"  alt="..." aria-label="IBM Logo" /></A>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
                         
