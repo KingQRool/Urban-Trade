@@ -51,7 +51,7 @@ public function EliminarinfoPublicaciones($id_p){
 }
 public function ActualizarInfoPublicacion($id_p){
     $this->id_p = $id_p;
-    // echo $this->id_p;
+    echo $this->id_p;
     $objetoretornadopublication = $this->MostrarPublicacion();
     require '../Views/Publicaciones/Update.php';
 }
