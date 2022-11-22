@@ -78,7 +78,7 @@ if(empty($_SESSION['nombre_u'])){
                             <div class="product-details">
                                 <button onclick="borrar(<?php echo $this->id_p;?>)">ELIMINAR</button>
                                 <div class="product-price">
-                                    <button onclick="borrar(<?php echo $this->id_p;?>)">ACTUALIZAR</button>
+                                    <button onclick="actualizar(<?php echo $this->id_p;?>)">ACTUALIZAR</button>
                                 </div>
                                
                             </div>
