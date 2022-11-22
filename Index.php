@@ -46,8 +46,8 @@
         <!-- CARROUSEL   Cambiar color de fondo style="background color" -->
     <section class="page-section" id="services" >
         <div class="text-center">
-            <h2 class="section-heading text-uppercase">¡ FORMA PARTE DE NUESTRA FAMILIA !</h2>
-            <p class="section-subheading text-muted"> "Tu personalidad es tu marca"</p>
+            <h2 class="section-heading text-uppercase" style="color:#7dce13">¡ FORMA PARTE DE NUESTRA FAMILIA !</h2>
+            
         </div>
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
             <div class="carousel-indicators">
@@ -60,7 +60,7 @@
             <p style="text-align: center;"><img src="https://img.freepik.com/foto-gratis/linda-chica-camisa-beige-tocando-gafas-sosteniendo-portatil-sonrisa_197531-6704.jpg?w=740&t=st=1660162231~exp=1660162831~hmac=52f53d54af7e566dfab0102655b970c3396a3c6c1cf463b82af8da92ca811747" width="50%" class="" alt="..."> </p> 
                 <div class="carousel-caption d-none d-md-block">
                     <div class="timeline-heading">
-                        <h4>Intuitivo y Facíl de Usar</h4>
+                        <h4 >Intuitivo y Facíl de Usar</h4>
                         
                     </div>
                 <p></p>
