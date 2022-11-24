@@ -76,9 +76,9 @@ if(empty($_SESSION['nombre_u'])){
                     <li>
                         <div class="product-box">
                             <div class="product-details">
-                                <button onclick="borrar(<?php echo $this->id_p;?>)">ELIMINAR</button>
+                                <button onclick="borrar(<?php echo $publication->id_p; ?>)">ELIMINAR</button>
                                 <div class="product-price">
-                                    <button onclick="actualizar(<?php echo $this->id_p;?>)">ACTUALIZAR</button>
+                                    <button onclick="actualizar(<?php echo $publication->id_p; ?>)">ACTUALIZAR</button>
                                 </div>
                                
                             </div>

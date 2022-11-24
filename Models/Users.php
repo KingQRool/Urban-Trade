@@ -14,7 +14,7 @@ class User{
     protected function GuardarUsuario()
     {
         $conexion = new Conexion();
-        $sql = "INSERT INTO tbl_usuarios_registrado(correo_u,nombre_u,contrasena_u,centro_u) VALUES (?,?,?,?)";
+        $sql = "INSERT INTO tbl_usuarios_registrados(correo_u,nombre_u,contrasena_u,centro_u) VALUES (?,?,?,?)";
         $insertar = $conexion->stm->prepare($sql);
         $insertar->bindParam(1,$this->correo_u);
         $insertar->bindParam(2,$this->nombre_u);
@@ -26,7 +26,7 @@ class User{
     public function BuscarUsuario()
     {
         $conexion = new Conexion();
-        $sql = "SELECT * FROM tbl_usuarios_registrado WHERE correo_u='$this->correo_u'";
+        $sql = "SELECT * FROM tbl_usuarios_registrados WHERE correo_u='$this->correo_u'";
         $usuario = $conexion->stm->prepare($sql);
         $usuario->execute();
         $usuarioobjeto = $usuario->fetchAll(PDO :: FETCH_OBJ);
@@ -35,7 +35,7 @@ class User{
     public function BuscarUsuarioVista()
     {
         $conexion = new Conexion();
-        $sql = "SELECT * FROM tbl_usuarios_registrado";
+        $sql = "SELECT * FROM tbl_usuarios_registrados";
         $usuario = $conexion->stm->prepare($sql);
         $usuario->execute();
         $usuarioobjeto = $usuario->fetchAll(PDO :: FETCH_OBJ);
@@ -44,7 +44,7 @@ class User{
 
     protected function MostrarUsuario(){
         $conexion = new Conexion();
-        $sql = "SELECT * FROM tbl_usuarios_registrado WHERE id_u='$this->id_u'";
+        $sql = "SELECT * FROM tbl_usuarios_registrados WHERE id_u='$this->id_u'";
         $mostrar = $conexion->stm->prepare($sql);
         $mostrar->execute();
         $objetoretornadousuario = $mostrar->fetchAll(PDO::FETCH_OBJ);
@@ -52,13 +52,13 @@ class User{
     }
     public function EliminarUsuario(){
         $conexion = new Conexion();
-        $sql = "DELETE FROM tbl_usuarios_registrado WHERE id_u='$this->id_u'";
+        $sql = "DELETE FROM tbl_usuarios_registrados WHERE id_u='$this->id_u'";
         $usuario = $conexion->stm->prepare($sql);
         $usuario->execute();
     }
     protected function ActualizarUsuarioBd(){
         $conexion = new Conexion();
-        $sql = "UPDATE tbl_usuarios_registrado SET nombre_u='$this->nombre_u',centro_u='$this->centro_u',contrasena_u='$this->contrasena_u',centro_u='$this->centro_u' WHERE id_u='$this->id_u'";
+        $sql = "UPDATE tbl_usuarios_registrados SET nombre_u='$this->nombre_u',centro_u='$this->centro_u',contrasena_u='$this->contrasena_u',centro_u='$this->centro_u' WHERE id_u='$this->id_u'";
         $actualizar = $conexion->stm->prepare($sql);
         $_SESSION['nombre_u'] = $this->nombre_u;
         $actualizar->execute();

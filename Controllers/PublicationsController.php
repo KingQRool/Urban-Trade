@@ -66,7 +66,7 @@ public function GuardarInfoAtcualizarPublicacion($id_p,$nombre_p,$info_p,$fotos_
     $this->id_u = $_SESSION['id_u'];
     $this->ActualizarPublicacion();
     $_SESSION['rol'] = 'invitado';
-    $this->ViewListUser();
+    $this->ViewMyPublics();
 // echo $id_p;
 //     echo $nombree;
 //     echo $deportee;
@@ -137,7 +137,7 @@ if(empty($copiafoto)){
 }
 else
 {
-    echo "adios";
+    //echo "adios";
     unlink($original_url);
     copy($copiafoto,$fotos_p_url);
 }
