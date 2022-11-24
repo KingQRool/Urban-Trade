@@ -33,8 +33,8 @@
     display: block;
   }
   .product-image img {
-    height: auto;
-    width: 100%;
+    height: 150px;
+    width: 150px;
   }
   .product-details {
     border-bottom: 36px solid #e8e6d6;

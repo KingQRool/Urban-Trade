@@ -35,7 +35,7 @@ if(empty($_SESSION['nombre_u'])){
                     <li>
                         <div class="product-box">
                             <div class="product-image">
-                                <a href="#"> <img src="<?php echo $publication->fotos_p_url; ?>" /></a>
+                                <a> <img src="<?php echo $publication->fotos_p_url; ?>" /></a>
                             </div>
                             <div class="product-details">
                                 <h2 class="product-name"><a><?php echo $publication->nombre_p; ?></a></h2>
