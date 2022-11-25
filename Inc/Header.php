@@ -17,7 +17,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand" href="../../Index.php">
+                <a class="navbar-brand" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=inicio">
                     <img src="../Public/Img/logourbantrade.png" style="height: 40px;" alt="*AQUI VA EL LOGO*" id="Logo">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
