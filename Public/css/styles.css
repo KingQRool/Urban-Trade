@@ -272,6 +272,7 @@ pre code {
   word-break: normal;
 }
 
+
 code {
   font-size: 0.875em;
   color: #d63384;
@@ -299,7 +300,12 @@ kbd kbd {
 figure {
   margin: 0 0 1rem;
 }
-
+#mensaje input{
+  text-align: center;
+}
+.footerpy-4{
+  background-color: #000;
+}
 img,
 svg {
   vertical-align: middle;

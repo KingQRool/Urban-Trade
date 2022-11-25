@@ -245,7 +245,7 @@
                      
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
-                        <a target="_blank" href="#!"><img class="img-fluid img-brand d-block mx-auto" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="..." aria-label="Microsoft Logo" /></a>
+                        <a target="_blank" href="https://github.com/KingQRool/Urban-Trade"><img class="img-fluid img-brand d-block mx-auto" src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="..." aria-label="Microsoft Logo" /></a>
                     </div>
                     <div class="col-md-3 col-sm-6 my-3">
                         <a target="_blank" href="https://www.sena.edu.co/es-co/Paginas/default.aspx"><img class="img-fluid img-brand d-block mx-auto" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Sena_Colombia_logo.svg/1200px-Sena_Colombia_logo.svg.png"  alt="..." aria-label="IBM Logo" /></a>
@@ -256,82 +256,21 @@
                 </div>
             </div>
         </div>
-        <!-- Contact o Contacto -->
-        <section class="page-section" id="contact">
-            <div class="container">
-                <div class="text-center">
-                    <h2 class="section-heading text-uppercase" >Contactanos</h2>
-                    <h3 class="section-subheading text-muted">Utiliza este espacio para escribirnos un mensaje personal como una critica, sugerencia o agradecimientos, Esto lo hacemos para interactuar mas con nuestros usuarios y mejorar tu experiencia.</h3>
-                </div>
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
-                    <div class="row align-items-stretch mb-5">
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <!-- Name o Nombre input -->
-                                <input class="form-control" id="name" type="text" placeholder="Tu Nombre *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="name:required">Un Nombre Es Requerido.</div>
-                            </div>
-                            <div class="form-group">
-                                <!-- Email address o Correo input-->
-                                <input class="form-control" id="email" type="email" placeholder="Tu E-mail *" data-sb-validations="required,email" />
-                                <div class="invalid-feedback" data-sb-feedback="email:required">Un E-mail Es Requerido.</div>
-                                <div class="invalid-feedback" data-sb-feedback="email:email">El E-mail No Es Valido.</div>
-                            </div>
-                            <div class="form-group mb-md-0">
-                                <!-- Phone number o Telefono input-->
-                                <input class="form-control" id="phone" type="number" placeholder="Tu Telefono *" data-sb-validations="required" />
-                                <div class="invalid-feedback" data-sb-feedback="phone:required">Un Numero Es Requerido.</div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="form-group form-group-textarea mb-md-0">
-                                <!-- Message input-->
-                                <textarea class="form-control" id="message" placeholder="Tu Mensaje *" data-sb-validations="required"></textarea>
-                                <div class="invalid-feedback" data-sb-feedback="message:required">Un Mensaje Es Requerido.</div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Submit success message-->
-                    <!---->
-                    <!-- This is what your users will see when the form-->
-                    <!-- has successfully submitted-->
-                    <div class="d-none" id="submitSuccessMessage">
-                        <div class="text-center text-white mb-3">
-                            <div class="fw-bolder">Form submission successful!</div>
-                            To activate this form, sign up at
-                            <br />
-                            <a href="https://startbootstrap.com/solution/contact-forms"></a>
-                        </div>
-                    </div>
-                    <!-- Submit error message-->
-                    <!---->
-                    <!-- This is what your users will see when there is-->
-                    <!-- an error submitting the form-->
-                    <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
-                    <!-- Submit Button-->
-                    <div class="container">
-                    <p style="text-align: center;"> <button  class="btn btn-primary btn-xl text-uppercase" href="">Enviar Mensaje</button></p>
-                    </div>
-                </form>
-            </div>
-        </section>
         <!-- Footer-->
         <footer class="footer py-4">
             <div class="container">
-            <div id="copyright" align="center">&copy; 2022 - 2022 WWW.Urban-Trade.com</div>
-<script>
-(function(){
-	let cpr = document.getElementById("copyright");
-	cpr.innerHTML = "&copy; 2022 - "+new Date().getFullYear()+" WWW.Urban-Trade.com - All Rights Reserved.";
-})();
-</script>
+                <div class="row align-items-center">
+                    <div class="col-lg-4 text-lg-start">Copyright &copy; Urban Trade 2022</div>
+                    <div class="col-lg-4 my-3 my-lg-0">
+                        
+                    </div>
                     <div class="col-lg-4 text-lg-end">
-                        <a class="link-dark text-decoration-none me-3" href="ListadoPersonas.php">Politicas De Privacidad</a>
-                        <a class="link-dark text-decoration-none" href="">Terminos De Uso</a>
+                        <a class="link-dark text-decoration-none me-3">Politicas De Privacidad</a>
+                        <a class="link-dark text-decoration-none">Terminos De Uso</a>
                     </div>
                 </div>
             </div>  
-        </footer> 
+        </footer>  
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
