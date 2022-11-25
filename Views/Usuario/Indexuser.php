@@ -185,15 +185,6 @@ if(empty($_SESSION['nombre_u'])){
                         </div>
                     </li>
                     <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="../Public/img/tienda.PNG" alt="" style="height: 100%;"/></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4 class="subheading">Agregar Tienda</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">AL ESTAR REGISTRADO DIRIGETE AL APARTADO DE TIENDAS,SELECCIONA LA OPCION DE AGREGAR TIENDA Y LISTO.</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
                         <div class="timeline-image">
                             <h4>
                                 ¡Ahora si
