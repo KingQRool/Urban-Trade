@@ -22,7 +22,7 @@ public function ViewMyPublics(){
     require '../Views/Usuario/Mispublicaciones.php';
 }
 public function ViewList(){
-    
+
     $objetoretornadopublication = $this->BuscarPublicaciones();
     require '../Views/Publicaciones/Viewlist.php';
 }
@@ -65,7 +65,6 @@ public function GuardarInfoAtcualizarPublicacion($id_p,$nombre_p,$info_p,$fotos_
     $this->precios_p = $precios_p;
     $this->id_u = $_SESSION['id_u'];
     $this->ActualizarPublicacion();
-    $_SESSION['rol'] = 'invitado';
     $this->ViewMyPublics();
 // echo $id_p;
 //     echo $nombree;

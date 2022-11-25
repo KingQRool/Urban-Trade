@@ -44,9 +44,10 @@ if(empty($_SESSION['nombre_u'])){
                     <li>
                         <div class="product-box">
                             <div class="product-image">
-                                <a href="#"> <img src="<?php echo $publication->fotos_p_url; ?>" /></a>
+                                <a> <img src="<?php echo $publication->fotos_p_url; ?>" /></a>
                             </div>
                             <div class="product-details">
+                            <p class="product-name" style="text-transform: capitalize;"> publicado por:  <?php echo $publication->nombre_u; ?> </p>
                                 <h2 class="product-name"><a><?php echo $publication->nombre_p; ?></a></h2>
                                 <div class="product-rating">
                                     <span class="product-star-rating" style="width:100%;">5 out of 5 stars</span>

@@ -60,11 +60,15 @@ class UserController extends User
             $_SESSION['nombre_u'] = $usuario->nombre_u;
             $_SESSION['correo_u'] = $usuario->correo_u;
             $this->CargoVistaInicio();
-        }else{
+        }
+        else{
+            
+            session_destroy();
             echo '<script language="javascript">alert("Contraseña incorrecta")</script>';
             $this->CargoVistaLogin();
-            
+
         }
+
     }
 
     public function ActualizarUsuario($id_u){
