@@ -31,7 +31,7 @@ class Publication{
 
     protected function BuscarPublicaciones(){
         $conexion = new Conexion();
-        $sql = "SELECT * FROM tbl_publicaciones";
+        $sql = "SELECT * FROM tbl_publicaciones NATURAL JOIN tbl_usuarios_registrados";
         $mostrar = $conexion->stm->prepare($sql);
         $mostrar->execute();
         $objetoretornadopublication = $mostrar->fetchAll(PDO::FETCH_OBJ);
