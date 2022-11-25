@@ -29,7 +29,6 @@
                         <li class="nav-item"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=register">Registro</a></li>
                         <li class="nav-item"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=login">Inicio de sesion</a></li>
                         <li class="nav-item"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=publication">Publicaciones</a></li>
-                        <li class="nav-item"><a class="nav-link" href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=store">Tiendas U.T</a></li>
                     </ul>
                 </div>
             </div>
@@ -174,15 +173,6 @@
                                 <h4 class="subheading"></h4>
                             </div>
                             <div class="timeline-body"><p class="text-muted">AL ESTAR REGISTRADO DIRIGETE AL APARTADO DE PUBLICACIONES,SELECCIONA LA OPCION DE NUEVA PUBLICACION Y LISTO REALIZALA</p></div>
-                        </div>
-                    </li>
-                    <li class="timeline-inverted">
-                        <div class="timeline-image"><img class="rounded-circle img-fluid" src="Public/img/tienda.PNG" alt="" style="height: 100%;"/></div>
-                        <div class="timeline-panel">
-                            <div class="timeline-heading">
-                                <h4 class="subheading">Agregar Tienda</h4>
-                            </div>
-                            <div class="timeline-body"><p class="text-muted">AL ESTAR REGISTRADO DIRIGETE AL APARTADO DE TIENDAS,SELECCIONA LA OPCION DE AGREGAR TIENDA Y LISTO.</p></div>
                         </div>
                     </li>
                     <li class="timeline-inverted">
