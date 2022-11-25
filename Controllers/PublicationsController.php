@@ -16,6 +16,11 @@ public function ViewInsert(){
 
     require '../Views/Publicaciones/Insert.php';
 }
+public function ViewMyPublics(){
+    $this->id_u = $_SESSION['id_u'];
+    $objetoretornadopublication = $this->BuscarMisPublicaciones();
+    require '../Views/Usuario/Mispublicaciones.php';
+}
 public function ViewList(){
     
     $objetoretornadopublication = $this->BuscarPublicaciones();
@@ -34,6 +39,7 @@ public function GuardarInfoPublicacion($nombre_p,$info_p,$fotos_p,$fotos_p_url,$
     $this->fotos_p = $fotos_p;
     $this->fotos_p_url = $fotos_p_url;
     $this->precios_p = $precios_p;
+    $this->id_u = $_SESSION['id_u'];
     $this->InsertarPublicacion();
     $this->RedirigirViews();
 }
@@ -45,7 +51,7 @@ public function EliminarinfoPublicaciones($id_p){
 }
 public function ActualizarInfoPublicacion($id_p){
     $this->id_p = $id_p;
-    // echo $this->id_p;
+    echo $this->id_p;
     $objetoretornadopublication = $this->MostrarPublicacion();
     require '../Views/Publicaciones/Update.php';
 }
@@ -57,9 +63,10 @@ public function GuardarInfoAtcualizarPublicacion($id_p,$nombre_p,$info_p,$fotos_
     $this->fotos_p = $fotos_p;    
     $this->fotos_p_url = $fotos_p_url;
     $this->precios_p = $precios_p;
+    $this->id_u = $_SESSION['id_u'];
     $this->ActualizarPublicacion();
     $_SESSION['rol'] = 'invitado';
-    $this->ViewListUser();
+    $this->ViewMyPublics();
 // echo $id_p;
 //     echo $nombree;
 //     echo $deportee;
@@ -79,6 +86,10 @@ public function RedirigirViews(){
 if(isset($_GET['action']) && $_GET['action']=='insert'){
 $instanciapublications = new PublicationsController();
 $instanciapublications->ViewInsert();
+}
+if(isset($_GET['action']) && $_GET['action']=='mispublicaciones'){
+$instanciapublications = new PublicationsController();
+$instanciapublications->ViewMyPublics();
 }
 
 if(isset($_GET['action']) && $_GET['action']=='publication'){
@@ -104,12 +115,12 @@ $instanciapublications->GuardarInfoPublicacion($_POST['nombre_p'],$_POST['info_p
 if (isset($_GET['action']) && $_GET['action'] == 'eliminar') {
     $instanciapublications = new PublicationsController();
     $instanciapublications->EliminarinfoPublicaciones($_GET['id_p']);
-    $instanciapublications->ViewListUser();
+    $instanciapublications->ViewMyPublics();
 }
 if(isset($_GET['action']) && $_GET['action']=='actualizar'){
     $instanciapublications = new PublicationsController();
     $instanciapublications->ActualizarInfoPublicacion($_GET['id_p']);
-    }
+}
 
 if(isset($_POST['action']) && $_POST['action']=='actualizar'){
 $instanciapublications = new PublicationsController();
@@ -126,7 +137,7 @@ if(empty($copiafoto)){
 }
 else
 {
-    echo "adios";
+    //echo "adios";
     unlink($original_url);
     copy($copiafoto,$fotos_p_url);
 }

@@ -1,12 +1,14 @@
-
-.titulo{
+.titulo {
   margin-top: 5rem;
-    text-align: center;
-    padding: 0.75rem;
-    font-size: 8rem;
-    font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    text-transform: uppercase;
-    font-weight: 700;
+  text-align: center;
+  padding: 0.75rem;
+  font-size: 8rem;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #3c8405;
 }
 .product-grid {
   margin: 0 -10px;
@@ -19,14 +21,17 @@
   border: 1px solid #89a193;
   margin: 0 10px;
   padding: 9px;
-  position: relative;
+  position: flex;
 }
 
 .product-image {
-  -webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,0.2), 5px 5px 15px -5px rgba(0,0,0,0.2);
-  -moz-box-shadow: 0 0 1px 1px rgba(0,0,0,0.2), 5px 5px 15px -5px rgba(0,0,0,0.2);
-  box-shadow: 0 0 1px 1px rgba(0,0,0,0.2), 5px 5px 15px -5px rgba(0,0,0,0.2);
-  margin-bottom: 10px;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2),
+    5px 5px 15px -5px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2),
+    5px 5px 15px -5px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.2),
+    5px 5px 15px -5px rgba(0, 0, 0, 0.2);
+  margin-bottom: auto;
 }
 .product-image a,
 .product-image img {
@@ -47,7 +52,7 @@
   font-weight: 700;
   left: 0;
   padding: 6px 10px;
-  position: absolute;
+  position: relative;
   top: 0;
 }
 .product-name a {
@@ -68,9 +73,6 @@
   height: 16px;
   width: 80px;
 }
-.inicioderecho{
-  
-}
 .product-no-rating,
 .product-rating {
   bottom: 0;
@@ -82,7 +84,6 @@
 .product-star-rating {
   text-indent: -9999px;
 }
-
 
 .product-grid-basic .product-details {
   border-bottom: 0;
@@ -101,13 +102,13 @@
 @media (min-width: 480px) {
   .product-grid li {
     float: left;
-    width: 50%;
+    width: 30%;
   }
 }
 
 @media (min-width: 720px) {
   .product-grid li {
-    width: 50%;
+    width: 30%;
   }
   .product-image {
     float: left;
@@ -127,7 +128,7 @@
 
 .clear:after {
   clear: both;
-  content: '';
+  content: "";
   display: table;
 }
 .mainWrapper {
@@ -135,48 +136,47 @@
 }
 .wrapBox {
   background-color: #f4f0e2;
-  font-family: 'Oxygen', Arial, sans-serif;
+  font-family: "Oxygen", Arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
   padding: 20px;
 }
 .test {
-  background-color: #FFF;
+  background-color: #fff;
   box-shadow: 0 0 1px 0 #ede6d1;
-  border: 20px solid #FFF;
+  border: 20px solid #fff;
   border-bottom: 0;
 }
 
-
-
 button {
-  position:relative;
-  margin-top:1%;
-  background: #7dce13  ;
-  border:2px solid #5bb318;
-  padding:20px;
-  font-size:0.9em;
-  box-shadow:4px 4px 0px 0px #424242;
-  font-family: 'Open Sans', sans-serif;
-  font-weight:700;
-  letter-spacing:5px;
-  text-transform:uppercase;
+  position: block;
+  margin-top: 1%;
+  background: #7dce13;
+  border: 2px solid #5bb318;
+  padding: 10px;
+  font-size: 10px;
+  box-shadow: 4px 4px 0px 0px #424242;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  letter-spacing: 5px;
+  text-transform: uppercase;
   transition: all 300ms ease-in-out;
   left: 210px;
-  top:-25px;
+  top: -25px;
+  text-align: center;
+  
 }
-a{
+a {
   color: #212529;
   text-decoration: none;
 }
-a:hover{
+a:hover {
   color: #212529;
   text-decoration: none;
 }
 
 button:hover {
-  left:px;
+  left: px;
   top: -30px;
-  box-shadow:0 0 0 0 greenyellow;
+  box-shadow: 0 0 0 0 greenyellow;
 }
-
