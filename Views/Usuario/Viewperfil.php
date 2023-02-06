@@ -12,13 +12,13 @@ if(empty($_SESSION['nombre_u'])){
     <link rel="stylesheet" href="../Public/Css/semantic.css">
     <link rel="icon" type="image/x-icon" href="../Public/img/logo.ico" />
     <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../Public/Css/perfilusuario.css">
+    <link rel="stylesheet" href="../Public\css\Perfil.css">
 </head>
 
 <body>
 
     <div>
-        <div class="ui vertical menu">
+        <div class="ui vertical menu" >
             <div class="item">
                 <img src="../Public/Img/logourbantrade_black.png  " alt="Logo UrbanTrade">
             </div>
@@ -37,18 +37,17 @@ if(empty($_SESSION['nombre_u'])){
 
 
         </div>
-
-        <div class="ui centered card top-20000">
-            <div class="image">
-                <img src="../Public/Img/Perfil.jpg">
-            </div>
+        <div class="container">
+        <div class="profile-box">
+            
+            <img src="../Public/Img/Perfil.jpg" class="profile-pic">
             <div class="content">
+                <br>
                 <p id="nombre_usaurio" class="ui centered header"><?php echo $_SESSION['nombre_u'];?></p>
             </div>
             <div class="content">
                 <p class="ui centered header"><?php echo $_SESSION['correo_u'];?></p>
-            </div>
-
+            </div><br>
             <div>
                 <!-- <i class="fa-solid fa-trash"></i> -->
                 <button class="ui inverted orange button" onclick="borrar(<?php echo $_SESSION['id_u'];?>)">Eliminar
@@ -59,6 +58,20 @@ if(empty($_SESSION['nombre_u'])){
 
             </div>
 
+            <br>
+            <button type="button">Mis productos</button>
+            <div class="profile-bottom">
+                 
+                <img src="images/arrow.png">
+            </div>
+        </div>
+    </div>
+
+        <div class="ui centered card top-20000" id="profile-box button">
+            
+            
+
+            
         </div>
     </div>
 

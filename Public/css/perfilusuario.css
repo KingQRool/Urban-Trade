@@ -1,15 +1,1 @@
-body{
-    background-image: linear-gradient(to right, #6e8de1 0%, #e688ff 100%);
-    
-}
 
-.Public,.item{
-    text-align: center;
-}
-#peril{
-    margin-bottom: -100000000px;
-}
-#nombre_usaurio{
-    text-transform: capitalize;
- 
-}

@@ -41,7 +41,7 @@
 
 .menu-icon {
     width: 25px;
-    position: absolute;
+    position: auto;
     left: 40px;
     top: 40px;
 }
