@@ -39,12 +39,6 @@
     font-size: 16px;
 }
 
-.menu-icon {
-    width: 25px;
-    position: auto;
-    left: 40px;
-    top: 40px;
-}
 .setting-icon {
     width: 25px;
     position: absolute;
@@ -69,24 +63,7 @@
     margin-top: -10px;
 
 }
-
-.profile-bottom img{
-    width:15px;
-    margin-top: 15px;
-    cursor: pointer;
-}
-
-.profile-box h3 {
-    font-size: 22px;
-    margin-top: 20px;
-    font-weight: 500;
-}
 #full {
     color: rgb(194, 193, 193);
 }
 
-.social-media img{
-    width: 20px;
-    margin: 20px 5px;
-    cursor: pointer;
-}

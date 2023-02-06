@@ -17,28 +17,10 @@ if(empty($_SESSION['nombre_u'])){
 
 <body>
 
-    <div>
-        <div class="ui vertical menu" >
-            
-            <div class="item">
-                <a
-                    href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=inicio">Inicio</a>
-            </div>
-            <div class="item">
-                <a
-                    href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=mispublicaciones">Mis
-                    Publicaciones</a>
-            </div>
-            <div class="item">
-                <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=cerrar">Cerrar Sesion</a>
-            </div>
-
-
-        </div>
         <div class="container">
         <div class="profile-box">
         <div class="item">
-                <img src="../Public/Img/logourbantrade_black.png  " alt="Logo UrbanTrade">
+                <img src="../Public/Img/logourbantrade_black.png  " alt="Logo UrbanTrade" id="LOGO-URBAN">
             </div>
             
             <img src="../Public/Img/Perfil.jpg" class="profile-pic">
@@ -56,25 +38,27 @@ if(empty($_SESSION['nombre_u'])){
                 <!--<i class="fa-regular fa-pen-to-square"></i> -->
                 <button class="ui inverted green button"
                     onclick="actualizar(<?php echo $_SESSION['id_u'];?>)">Actualizar Datos</button>
+                   
 
             </div>
 
             <br>
+        
+                    <button type="button"> <a
+                    href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=inicio">Inicio</a></button>
+                    
+            <div class="profile-bottom">
+                 
             <button type="button"> <a
                     href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=mispublicaciones">Mis
                     Publicaciones</a></button>
-            
-            <div class="profile-bottom">
-                 
-                <img src="images/arrow.png">
+                    <button class="iu inverted blue button"> <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=cerrar">Cerrar Sesion</a></button>
+                
             </div>
         </div>
     </div>
 
         <div class="ui centered card top-20000" id="profile-box button">
-            
-            
-
             
         </div>
     </div>
