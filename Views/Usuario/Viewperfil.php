@@ -19,9 +19,7 @@ if(empty($_SESSION['nombre_u'])){
 
     <div>
         <div class="ui vertical menu" >
-            <div class="item">
-                <img src="../Public/Img/logourbantrade_black.png  " alt="Logo UrbanTrade">
-            </div>
+            
             <div class="item">
                 <a
                     href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=inicio">Inicio</a>
@@ -39,6 +37,9 @@ if(empty($_SESSION['nombre_u'])){
         </div>
         <div class="container">
         <div class="profile-box">
+        <div class="item">
+                <img src="../Public/Img/logourbantrade_black.png  " alt="Logo UrbanTrade">
+            </div>
             
             <img src="../Public/Img/Perfil.jpg" class="profile-pic">
             <div class="content">
@@ -59,7 +60,10 @@ if(empty($_SESSION['nombre_u'])){
             </div>
 
             <br>
-            <button type="button">Mis productos</button>
+            <button type="button"> <a
+                    href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=mispublicaciones">Mis
+                    Publicaciones</a></button>
+            
             <div class="profile-bottom">
                  
                 <img src="images/arrow.png">
