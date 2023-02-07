@@ -12,43 +12,25 @@ if(empty($_SESSION['nombre_u'])){
     <link rel="stylesheet" href="../Public/Css/semantic.css">
     <link rel="icon" type="image/x-icon" href="../Public/img/logo.ico" />
     <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../Public/Css/perfilusuario.css">
+    <link rel="stylesheet" href="../Public\css\Perfil.css">
 </head>
 
 <body>
 
-    <div>
-        <div class="ui vertical menu">
-            <div class="item">
-                <img src="../Public/Img/logourbantrade_black.png  " alt="Logo UrbanTrade">
+        <div class="container">
+        <div class="profile-box">
+        <div class="item">
+                <img src="../Public/Img/logourbantrade_black.png  " alt="Logo UrbanTrade" id="LOGO-URBAN">
             </div>
-            <div class="item">
-                <a
-                    href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=inicio">Inicio</a>
-            </div>
-            <div class="item">
-                <a
-                    href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=mispublicaciones">Mis
-                    Publicaciones</a>
-            </div>
-            <div class="item">
-                <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=cerrar">Cerrar Sesion</a>
-            </div>
-
-
-        </div>
-
-        <div class="ui centered card top-20000">
-            <div class="image">
-                <img src="../Public/Img/Perfil.jpg">
-            </div>
+            
+            <img src="../Public/Img/Perfil.jpg" class="profile-pic">
             <div class="content">
+                <br>
                 <p id="nombre_usaurio" class="ui centered header"><?php echo $_SESSION['nombre_u'];?></p>
             </div>
             <div class="content">
                 <p class="ui centered header"><?php echo $_SESSION['correo_u'];?></p>
-            </div>
-
+            </div><br>
             <div>
                 <!-- <i class="fa-solid fa-trash"></i> -->
                 <button class="ui inverted orange button" onclick="borrar(<?php echo $_SESSION['id_u'];?>)">Eliminar
@@ -56,9 +38,28 @@ if(empty($_SESSION['nombre_u'])){
                 <!--<i class="fa-regular fa-pen-to-square"></i> -->
                 <button class="ui inverted green button"
                     onclick="actualizar(<?php echo $_SESSION['id_u'];?>)">Actualizar Datos</button>
+                   
 
             </div>
 
+            <br>
+        
+                    <button type="button"> <a
+                    href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=inicio">Inicio</a></button>
+                    
+            <div class="profile-bottom">
+                 
+            <button type="button"> <a
+                    href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=mispublicaciones">Mis
+                    Publicaciones</a></button>
+                    <button class="iu inverted blue button"> <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/UsersController.php?action=cerrar">Cerrar Sesion</a></button>
+                
+            </div>
+        </div>
+    </div>
+
+        <div class="ui centered card top-20000" id="profile-box button">
+            
         </div>
     </div>
 
