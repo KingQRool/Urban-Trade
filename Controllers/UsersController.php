@@ -51,6 +51,7 @@ class UserController extends User
 
     public function VerificarLogin($correo_u,$contrasena_u)
     {
+        //VERIFICACION INICIO DE SESION
         $this->correo_u = $correo_u;
         $this->contrasena_u = $contrasena_u;
         $usuarioobjeto = $this->BuscarUsuario();

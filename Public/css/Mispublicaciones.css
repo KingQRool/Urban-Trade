@@ -38,8 +38,8 @@
   display: block;
 }
 .product-image img {
-  height: 150px;
-  width: 150px;
+  height: 350px;
+  width: 350px;
 }
 .product-details {
   border-bottom: 36px solid #e8e6d6;

@@ -46,7 +46,7 @@
         <!-- CARROUSEL   Cambiar color de fondo style="background color" -->
     <section class="page-section" id="services" >
         <div class="text-center">
-            <h2 class="section-heading text-uppercase" style="color:#7dce13">¡ FORMA PARTE DE NUESTRA FAMILIA !</h2>
+            <h2 class="section-heading text-uppercase" style="color:#7dce13">¡ FORMA PARTE DE NUESTRA FAMILIA UT !</h2>
             
         </div>
         <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">

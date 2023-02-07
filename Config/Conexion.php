@@ -1,7 +1,7 @@
 <?php
 class Conexion{
     public $stm;
-
+    //CONSTRUCTOR 
     public function __construct(){
         try {
             //LO QUE ORDENE VA A INTENTAR HACER

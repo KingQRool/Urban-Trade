@@ -1,15 +1,25 @@
 <head>
-    <script src="../Public/Js/jquery-3.1.1.min.js"></script>
-    <script scr="../Public/Js/semantic.js"></script>
-    <link rel="stylesheet" href="../Public/Css/semantic.css">
+
     <link rel="icon" type="image/x-icon" href="../Public/img/logo.ico" />
+    <link rel="stylesheet" href="../Public/Css/semantic.css">
+    <link rel="stylesheet" href="../Public/Css/insertarpublicacion.css">
+    <script src="../Public/Js/jquery-3.1.1.min.js"></script>
+    <script src="../Public/Js/semantic.js"></script>
     <script src="https://kit.fontawesome.com/357827b059.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
-    <div class="ui container">
+<div class="Inicio">
+      <a href="http://localhost/Proyecto Git/Urban-Trade/Controllers/PublicationsController.php?action=publicationuser">
+      <i class="fa-solid fa-chevron-left"></i>
+        VOLVER
+      </a>
+    </div>
+    <div class="ui container" id="centrar">
+    
         <div class="ui form">
-            <h1>Insertar Publicacion</h1>
+            <h1 class="titulo">Insertar Publicacion</h1>
             <form action="PublicationsController.php" method="POST" enctype="multipart/form-data">
                 <div class="four fields">
                     <div class="field">
@@ -41,8 +51,9 @@
                     <div class="field">
                     </div>
                     <div class="field">
+                    
                         <button class="ui right labeled icon button">
-                            <i class="right arrow icon"></i>Guardar
+                        AGREGAR
                         </button>
                     </div>
                     <div class="fiel">
@@ -55,4 +66,6 @@
             </form>
         </div>
     </div>
+    <script>
+</script>
 </body>
